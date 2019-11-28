@@ -27,7 +27,7 @@
                     
                     <div class="table-responsive table-responsive-data2">
                         <table class="table table-data2">
-                            <thead>
+                            <thead style="background-color: #666565; color:white;">
                                 <tr>
                                     <th>NO</th>
                                     <th>Nama</th>
@@ -95,6 +95,9 @@
                                                 <i class="zmdi zmdi-more"></i>
                                             </button>
                                         </div>
+                                    </td>
+                                     <td>
+                                       
                                     </td>
                                 </tr>
                                 <%}%>
