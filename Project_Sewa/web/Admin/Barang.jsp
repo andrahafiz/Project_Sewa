@@ -4,10 +4,10 @@
     Author     : User
 --%>
 <%@page import="Admin.Methods" %>
-<%@page import="Admin.J_Penyewa" %>
+<%@page import="Admin.J_Barang" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%Methods kategorifcd = new Methods();
-    J_Penyewa[] dataPenyewa = kategorifcd.getDataPenyewa();
+    J_Barang[] dataPenyewa = kategorifcd.getDataBarang();
 %>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>date</th>
+                                    <th>ID Barang</th>
                                     <th>type</th>
                                     <th>description</th>
                                     <th>status</th>

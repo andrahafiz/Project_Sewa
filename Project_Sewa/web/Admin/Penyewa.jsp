@@ -24,7 +24,7 @@
                     <!-- DATA TABLE -->
                     <h3 class="title-5 m-b-35">data penyewa</h3>
                     <hr/>
-                    
+
                     <div class="table-responsive table-responsive-data2">
                         <table class="table table-data2">
                             <thead style="background-color: #666565; color:white;">
@@ -46,61 +46,58 @@
 
                                 <tr class="spacer"></tr>
                                 <!--<tr class="tr-shadow">-->
-                                    <td>
-                                        <label class="au-checkbox">
-                                            <% out.print((i + 1)); %>
-                                        </label>
-                                    </td>
+                            <td>
+                                <label class="au-checkbox">
+                                    <% out.print((i + 1)); %>
+                                </label>
+                            </td>
 
-                                    <td> 
-                                        <% out.print(dataPenyewa[i].getPenyewa_namadepan() + " " + dataPenyewa[i].getPenyewa_namabelakang()); %>
-                                    </td>
+                            <td> 
+                                <% out.print(dataPenyewa[i].getPenyewa_namadepan() + " " + dataPenyewa[i].getPenyewa_namabelakang()); %>
+                            </td>
 
-                                    <td >
-                                        <%out.print(dataPenyewa[i].getPenyewa_tgllahir());%>
-                                    </td>
+                            <td >
+                                <%out.print(dataPenyewa[i].getPenyewa_tgllahir());%>
+                            </td>
 
-                                    <td> 
-                                        <% out.print(dataPenyewa[i].getPenyewa_jk()); %>
-                                    </td>
+                            <td> 
+                                <% out.print(dataPenyewa[i].getPenyewa_jk()); %>
+                            </td>
 
-                                    <td>
-                                        <span class="status--process"><% out.print(dataPenyewa[i].getPenyewa_notlp()); %></span>
-                                    </td>
-                                    <td>
-                                        <span class="block-email">
-                                            <%
-                                                out.print(dataPenyewa[i].getPenyewa_email());
-                                            %>
+                            <td>
+                                <span class="status--process"><% out.print(dataPenyewa[i].getPenyewa_notlp()); %></span>
+                            </td>
+                            <td>
+                                <span class="block-email">
+                                    <%
+                                        out.print(dataPenyewa[i].getPenyewa_email());
+                                    %>
 
-                                        </span>
-                                    </td>
+                                </span>
+                            </td>
 
-                                    <td>
-                                        <%out.print(dataPenyewa[i].getPenyewa_alamat());%>
-                                    </td>
+                            <td>
+                                <%out.print(dataPenyewa[i].getPenyewa_alamat());%>
+                            </td>
 
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                <i class="zmdi zmdi-mail-send"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                <i class="zmdi zmdi-more"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                     <td>
-                                       
-                                    </td>
-                                </tr>
-                                <%}%>
+                            <td>
+                                <div class="table-data-feature">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
+                                        <i class="zmdi zmdi-format-list-bulleted"></i>
+                                    </button>
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="zmdi zmdi-edit"></i>
+                                    </button>
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="zmdi zmdi-delete"></i>
+                                    </button>
+                                </div>
+                            </td>
+                            <td>
+
+                            </td>
+                            </tr>
+                            <%}%>
                             </tbody>
                         </table>
                     </div>

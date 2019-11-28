@@ -26,6 +26,10 @@
                                 <i class="fas fa-chart-bar"></i>Data Penyewa</a>
                         </li>
                         <li>
+                            <a href="index.jsp?hlm=barang">
+                                <i class="fas fa-chart-bar"></i>Data Barang</a>
+                        </li>
+                        <li>
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
