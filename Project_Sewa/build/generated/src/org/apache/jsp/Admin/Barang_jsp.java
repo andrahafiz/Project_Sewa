@@ -3,10 +3,10 @@ package org.apache.jsp.Admin;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import Admin.Methods;
-import Admin.J_Penyewa;
+import Login.Methods;
+import Login.J_Penyewa;
 
-public final class Penyewa_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class Barang_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();

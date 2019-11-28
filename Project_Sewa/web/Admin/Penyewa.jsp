@@ -3,8 +3,8 @@
     Created on : Nov 28, 2019, 11:50:38 PM
     Author     : User
 --%>
-<%@page import="Login.Methods" %>
-<%@page import="Login.J_Penyewa" %>
+<%@page import="Admin.Methods" %>
+<%@page import="Admin.J_Penyewa" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%Methods kategorifcd = new Methods();
     J_Penyewa[] dataPenyewa = kategorifcd.getDataPenyewa();
