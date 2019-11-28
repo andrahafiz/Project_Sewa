@@ -1,0 +1,18 @@
+SMAP
+registrasi_jsp.java
+JSP
+*S JSP
+*F
++ 0 registrasi.jsp
+SewaBangsat/registrasi.jsp
++ 1 header.jsp
+SewaBangsat/header.jsp
++ 2 footer.jsp
+SewaBangsat/footer.jsp
+*L
+5,38:50
+1#1,47:88
+42#0,96:135
+5#2,92:231
+137#0,20:322
+*E
