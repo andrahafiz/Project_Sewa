@@ -4483,7 +4483,7 @@ section {
     text-transform: uppercase;
     border: none;
     font-weight: 600;
-    vertical-align: top;
+    vertical-align: middle;
     padding: 15px 40px;
     padding-right: 10px;
 }
