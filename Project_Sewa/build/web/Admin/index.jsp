@@ -62,7 +62,7 @@
                 <%
                 } else if(kategori.equalsIgnoreCase("Penyewa")){%>
                 <%@include file="../Admin/Penyewa.jsp" %>
-                <% } else if(kategori.equalsIgnoreCase("Barang")){%>
+                <% } else if(kategori.equalsIgnoreCase("barang")){%>
                 <%@include file="../Admin/Barang.jsp" %>
                 <% }%>
 

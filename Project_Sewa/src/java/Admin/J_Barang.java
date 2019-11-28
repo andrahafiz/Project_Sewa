@@ -72,7 +72,7 @@ public class J_Barang {
         this.barang_keadaan = barang_keadaan;
     }
 
-    public boolean isBarang_status() {
+    public boolean getBarang_status() {
         return barang_status;
     }
 
