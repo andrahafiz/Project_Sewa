@@ -23,9 +23,7 @@
         <meta charset="UTF-8">
         <!-- Site Title -->
         <title>Karma Shop</title>
-        <!--
-                CSS
-                ============================================= -->
+        <!--CSS============================================= -->
         <link rel="stylesheet" href="css/linearicons.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/themify-icons.css">
@@ -41,23 +39,7 @@
 
     <body>
 
-        <!--        <?php
-                                        error_reporting(0);
-                                        $apaja = $_REQUEST['slink'];
-                                        $class = ""
-                                        if (isset($apaja))
-                                                include "$apaja";
-                                        else
-                                                include "home.php";
-                                        ?>-->
        
-<!--//            String halaman = request.getParameter("hlm");
-//            if (halaman==null) {
-//                out.print("AA");
-//            } else  {
-//                out.print(halaman);
-//            }-->
-
      
         <%@include file="header.jsp" %>
         <%@include file="home.jsp" %>
