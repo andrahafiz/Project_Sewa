@@ -40,9 +40,9 @@ public class BrgFacade {
                 temprs.setDeskripsi(rs.getString("barang_deskripsi"));
                 temprs.setHargaBrg(rs.getInt("barang_harga"));
                 temprs.setFoto(rs.getString("barang_foto"));
-                temprs.setStatus(rs.getString("barang_status"));
+                temprs.setStatus(Boolean.parseBoolean(rs.getString("barang_status")));
                 temprs.setKondisi(rs.getString("barang_kondisi"));
-                temprs.setKategori(rs.getString("barang_kategori"));
+                temprs.setKategori(rs.getString("kategori_id"));
                 listrs.add(temprs);
             }
             DataBrg = new Brg[listrs.size()];
@@ -94,9 +94,9 @@ public class BrgFacade {
                 temprs.setDeskripsi(rs.getString("barang_deskripsi"));
                 temprs.setHargaBrg(rs.getInt("barang_harga"));
                 temprs.setFoto(rs.getString("barang_foto"));
-                temprs.setStatus(rs.getString("barang_status"));
+                temprs.setStatus(Boolean.parseBoolean(rs.getString("barang_status")));
                 temprs.setKondisi(rs.getString("barang_kondisi"));
-                temprs.setKategori(rs.getString("barang_kategori"));
+                temprs.setKategori(rs.getString("kategori_id"));
                 listrs.add(temprs);
             }
             DataBrg = new Brg[listrs.size()];
@@ -131,7 +131,7 @@ public class BrgFacade {
         String dbUrl = "jdbc:derby://localhost:1527/DB_Projek";
         String pwd = "root";
         String login = "root";
-        String sql = "Select * from tb_barang where barang_kategori='"+kategori+"'";
+        String sql = "Select * from tb_barang where kategori_id='"+kategori+"'";
 
         try {
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
@@ -147,9 +147,9 @@ public class BrgFacade {
                 temprs.setDeskripsi(rs.getString("barang_deskripsi"));
                 temprs.setHargaBrg(rs.getInt("barang_harga"));
                 temprs.setFoto(rs.getString("barang_foto"));
-                temprs.setStatus(rs.getString("barang_status"));
+                temprs.setStatus(Boolean.parseBoolean(rs.getString("barang_status")));
                 temprs.setKondisi(rs.getString("barang_kondisi"));
-                temprs.setKategori(rs.getString("barang_kategori"));
+                temprs.setKategori(rs.getString("kategori_id"));
                 listrs.add(temprs);
             }
             DataBrg = new Brg[listrs.size()];

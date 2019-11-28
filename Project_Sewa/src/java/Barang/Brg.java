@@ -10,7 +10,7 @@ package Barang;
  * @author Abdul
  */
 public class Brg {
-    private String barang_id, barang_nama,  barang_deskripsi, barang_foto, barang_kondisi, barang_kategori;
+    private String barang_id, barang_nama,  barang_deskripsi, barang_foto, barang_kondisi, kategori_id;
     private boolean barang_status;
     private int barang_harga;
     
@@ -70,10 +70,10 @@ public class Brg {
         this.barang_kondisi = barang_kondisi;
     }
     public String getKategori() {
-        return barang_kategori;
+        return kategori_id;
     }
 
-    public void setKategori(String barang_kategori) {
-        this.barang_kategori = barang_kategori;
+    public void setKategori(String kategori_id) {
+        this.kategori_id = kategori_id;
     }
 }

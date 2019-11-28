@@ -3,8 +3,8 @@ package org.apache.jsp.Admin;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import Login.Methods;
-import Login.J_Penyewa;
+import Admin.Methods;
+import Admin.J_Penyewa;
 
 public final class Barang_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
