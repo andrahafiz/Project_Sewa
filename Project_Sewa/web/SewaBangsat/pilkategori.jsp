@@ -1,5 +1,5 @@
 <%-- 
-    Document   : kategori
+    Document   : pilkategori
     Created on : Nov 27, 2019, 8:35:13 AM
     Author     : Abdul
 --%>
@@ -65,9 +65,11 @@
                         <div class="head">Kategori Barang</div>
                         <ul class="main-categories">
                             <li class="main-nav-list"><%
+                                String ktgr = request.getParameter("kategori");
                                 BrgFacade BrgFcd = new BrgFacade();
                                 Brg brg = null;
-                                Brg[] dataBrg = BrgFcd.getDataBrg();
+                                Brg[] dataBrg = BrgFcd.getDataBrg(ktgr);
+                                
                                 for (int i = 0; i < dataBrg.length; i++) {
                                     out.println("<tr>"
                                             + "<td></td>"

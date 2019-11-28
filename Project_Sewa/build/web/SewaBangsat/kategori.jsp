@@ -71,7 +71,7 @@
                                 for (int i = 0; i < dataBrg.length; i++) {
                                     out.println("<tr>"
                                             + "<td></td>"
-                                            + "<td><a href=../Datars?kategori=" + dataBrg[i].getKategori() + ">"
+                                            + "<td><a href=pilkategori.jsp?kategori=" + dataBrg[i].getKategori() + ">"
                                             + dataBrg[i].getKategori() + "</td>"
                                             + "</tr>");
                                 }
