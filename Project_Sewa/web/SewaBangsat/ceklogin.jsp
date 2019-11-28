@@ -3,7 +3,12 @@
     Created on : Nov 28, 2019, 11:03:37 PM
     Author     : Abdul
 --%>
-<%@ page import ="java.sql.*" %>
+<%@page import ="java.sql.DriverManager" %>
+<%@page import ="java.sql.Connection" %>
+<%@page import ="java.sql.Statement" %>
+<%@page import ="java.sql.ResultSet" %>
+<%@page import ="java.sql.SQLException" %>
+<%@page import ="java.util.ArrayList" %>
 <%
     String userid = request.getParameter("username");    
     String pwd = request.getParameter("password");
@@ -24,6 +29,6 @@
     } else {
 //        out.println("welcome " + userid);
 //        out.println("password " + pwd);
-        out.println("Invalid password <a href='index.jsp'>try again</a>");
+        out.println("Invalid password <a href='index.html'>try again</a>");
     }
 %>

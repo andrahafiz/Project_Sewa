@@ -65,7 +65,7 @@
                     <div class="col-lg-12">
                         <div class="login_form_inner">
                             <h3>Registrasi</h3><br>
-                            <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate" style="
+                            <form class="row login_form" action="cekregis.jsp" method="post" id="contactForm" novalidate="novalidate" style="
                                   max-width: 800px;
                                   ">
                                 <div class="col-md-6 form-group">
