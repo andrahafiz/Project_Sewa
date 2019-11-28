@@ -7,8 +7,16 @@ JSP
 SewaBangsat/index.jsp
 + 1 header.jsp
 SewaBangsat/header.jsp
++ 2 home.jsp
+SewaBangsat/home.jsp
++ 3 footer.jsp
+SewaBangsat/footer.jsp
 *L
-5,40:49
-1#1,64:89
-44#0,1096:153
+5,58:51
+1#1,72:109
+62#0,2:181
+5#2,972:183
+63#0,2:1154
+5#3,92:1156
+64#0,22:1247
 *E
