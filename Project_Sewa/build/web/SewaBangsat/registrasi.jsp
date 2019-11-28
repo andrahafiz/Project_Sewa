@@ -1,11 +1,10 @@
 <%-- 
-    Document   : login
-    Created on : Nov 27, 2019, 8:13:28 AM
+    Document   : registrasi
+    Created on : Nov 28, 2019, 9:41:17 PM
     Author     : Abdul
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -39,7 +38,8 @@
 </head>
 
 <body>
-    <%@include file="header.jsp" %>
+
+	<%@include file="header.jsp" %>
 
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">
@@ -65,22 +65,53 @@
 					<div class="login_box_img">
 						<img class="img-fluid" src="img/login.jpg" alt="">
 						<div class="hover">
-							<h4>New to our website?</h4>
-							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="primary-btn" href="registrasi.jsp">Create an Account</a>
+							<h4>Anda Sudah Memiliki Akun?</h4>
+							<p>Masuk Ke Menu Login Untuk Melakukan Login</p>
+							<a class="primary-btn" href="login.jsp">Klik Disini</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
-						<h3>Log in to enter</h3>
+						<h3>Registrasi</h3>
 						<form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+							
+						
+							<div class="col-md-6 form-group">
+								<input type="text" class="form-control" id="name" name="nama_depan" placeholder="Nama Depan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Depan'">
+							</div>
+							<div class="col-md-6 form-group">
+								<input type="text" class="form-control" id="name" name="nama_belakang" placeholder="Nama Belakang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Belakang'">
+							</div>
+						
+						
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+								<input type="email" class="form-control" id="name" name="email" placeholder="Alamat Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Email'">
+							</div>
+						
+						
+							<div class="col-md-12 form-group">
+								<div class="form-select" id="default-select">
+									<select>
+									<option value="0">Jenis Kelamin</option>
+									<option value="Laki Laki">Laki Laki</option>
+									<option value="Perempuan">Perempuan</option>
+									</select>
+								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+								<textarea class="single-textarea" placeholder="Alamat Rumah" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Rumah'"
+								 required></textarea>
 							</div>
+
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+							</div>
+							
+							
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
 									<input type="checkbox" id="f-option2" name="selector">
@@ -91,6 +122,9 @@
 								<button type="submit" value="submit" class="primary-btn">Log In</button>
 								<a href="#">Forgot Password?</a>
 							</div>
+
+							
+							
 						</form>
 					</div>
 				</div>
@@ -99,7 +133,8 @@
 	</section>
 	<!--================End Login Box Area =================-->
 
-	<%@include file="footer.jsp" %>
+	
+        <%@include file="footer.jsp" %>
 
 
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
