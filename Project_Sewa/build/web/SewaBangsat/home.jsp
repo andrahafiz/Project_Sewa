@@ -109,6 +109,14 @@
         <section class="category-area">
             <div class="container">
                 <div class="row justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <div class="section-title">
+                                <h1>Kategori Yang Sering Disewa</h1>
+                                <p>Kategori barang yang sering disewa oleh pengguna, baik dari Masyarakat maupun Mahasiswa</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12">
                         <div class="row">
                             <div class="col-lg-8 col-md-8">

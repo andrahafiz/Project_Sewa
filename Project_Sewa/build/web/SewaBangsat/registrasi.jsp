@@ -68,25 +68,27 @@
                             <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate" style="
                                   max-width: 800px;
                                   ">
-
-
-
                                 <div class="col-md-6 form-group">
                                     <input type="text" class="form-control" id="name" name="nama_depan" placeholder="Nama Depan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Depan'">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <input type="text" class="form-control" id="name" name="nama_belakang" placeholder="Nama Belakang" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Belakang'">
                                 </div>
-
-
                                 <div class="col-md-12 form-group">
                                     <input type="email" class="form-control" id="name" name="email" placeholder="Alamat Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Email'">
                                 </div>
-
-
                                 <div class="col-md-12 form-group">
+                                    <input type="text" class="form-control" id="name" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input type="password" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input type="password" class="form-control" id="name" name="password" placeholder="Re-Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Re-Password'">
+                                </div>
+                                <div class="col-md-4 form-group">
                                     <div class="form-select" id="default-select">
-                                        <select>
+                                        <select name="jenis">
                                             <option value="0">Jenis Kelamin</option>
                                             <option value="Laki Laki">Laki Laki</option>
                                             <option value="Perempuan">Perempuan</option>
@@ -94,26 +96,21 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <textarea class="single-textarea" placeholder="Alamat Rumah" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Rumah'"
+                                    <textarea class="single-textarea" name="alamat" placeholder="Alamat Rumah" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Rumah'"
                                               required></textarea>
                                 </div>
-
                                 <div class="col-md-12 form-group">
-                                    <input type="text" class="form-control" id="name" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+                                    <input type="text" class="form-control" id="name" name="nohp" placeholder="No HP/Telepon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'No HP/Telepon'">
                                 </div>
-                                <div class="col-md-12 form-group">
-                                    <input type="password" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
-                                </div>
-
 
                                 <div class="col-md-12 form-group">
                                     <div class="creat_account">
                                         <input type="checkbox" id="f-option2" name="selector">
-                                        <label for="f-option2">Keep me logged in</label>
+                                        <label for="f-option2">Menerima Syarat Dan Ketentuan Yang Ada</label>
                                     </div>
                                 </div>
-                                <div class="col-md-12 form-group">
-                                    <button type="submit" value="submit" class="primary-btn">Log In</button>
+                                <div class="col-md-4 form-group">
+                                    <button type="submit" value="submit" class="primary-btn">Daftar</button>
                                     <a href="login.jsp">Sudah Memiliki Akun</a>
                                 </div>
 

@@ -17,7 +17,7 @@
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item"><a class="nav-link" href="index.jsp">Beranda</a></li>
 							<li class="nav-item"><a class="nav-link" href="kategori.jsp">Kategori Sewa</a></li>
-							<li class="nav-item"><a class="nav-link" href="about.jsp">Hubungi Kami</a></li>
+							<li class="nav-item"><a class="nav-link" href="kontak.jsp">Hubungi Kami</a></li>
                                                         <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
 							<li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
 						</ul>
