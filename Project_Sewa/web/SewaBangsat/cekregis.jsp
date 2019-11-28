@@ -3,14 +3,20 @@
     Created on : Nov 29, 2019, 12:25:32 AM
     Author     : Abdul
 --%>
-<%@ page import ="java.sql.*" %>
+<%@page import="java.sql.DriverManager" %>
+<%@page import="java.sql.Connection" %>
+<%@page import="java.sql.Statement" %>
+<%@page import="java.sql.ResultSet" %>
+<%@page import="java.sql.SQLException" %>
+<%@page import="java.util.ArrayList" %>
 <%
+    String tanggal = "2000/10/04";
     String username = request.getParameter("username");    
     String password = request.getParameter("password");
     String nama_depan = request.getParameter("nama_depan");
     String nama_belakang = request.getParameter("nama_belakang");
     String jk = request.getParameter("jenis");
-    String tgllahir = request.getParameter("-");
+    String tgllahir = request.getParameter(tanggal);
     String alamat = request.getParameter("alamat");
     String email = request.getParameter("email");
     String nohp = request.getParameter("nohp");
