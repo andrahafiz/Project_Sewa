@@ -65,6 +65,7 @@ public class Brg {
     public String getKondisi() {
         return barang_kondisi;
     }
+    //uudah commit
 
     public void setKondisi(String barang_kondisi) {
         this.barang_kondisi = barang_kondisi;

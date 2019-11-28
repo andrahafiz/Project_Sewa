@@ -138,7 +138,7 @@ public class BrgFacade {
             con = DriverManager.getConnection(dbUrl, login, pwd);
             stmt = con.createStatement();
             rs = stmt.executeQuery(sql);
-
+//udah commit
             String kode = null;
             while (rs.next()) {
                 temprs = new Brg();
