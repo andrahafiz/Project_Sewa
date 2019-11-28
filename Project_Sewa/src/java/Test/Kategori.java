@@ -5,8 +5,6 @@
  */
 package Test;
 
-import Login.*;
-
 /**
  *
  * @author User

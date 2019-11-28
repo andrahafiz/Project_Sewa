@@ -3,8 +3,8 @@
     Created on : Nov 28, 2019, 11:50:38 PM
     Author     : User
 --%>
-<%@page import="Login.Methods" %>
-<%@page import="Login.J_Penyewa" %>
+<%@page import="Admin.Methods" %>
+<%@page import="Admin.J_Penyewa" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%Methods kategorifcd = new Methods();
     J_Penyewa[] dataPenyewa = kategorifcd.getDataPenyewa();
@@ -23,24 +23,20 @@
                 <div class="col-md-12">
                     <!-- DATA TABLE -->
                     <h3 class="title-5 m-b-35">data penyewa</h3>
-                    <div class="table-data__tool">
-
-                        <div class="table-data__tool-left">
-                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                <i class="zmdi zmdi-plus"></i>add item</button>
-                        </div>
-                    </div>
+                    <hr/>
+                    
                     <div class="table-responsive table-responsive-data2">
                         <table class="table table-data2">
-                            <thead>
+                            <thead style="background-color: #666565; color:white;">
                                 <tr>
                                     <th>NO</th>
-                                    <th>name</th>
-                                    <th>email</th>
-                                    <th>description</th>
-                                    <th>date</th>
-                                    <th>status</th>
-                                    <th>price</th>
+                                    <th>Nama</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Nomor Telp/Hp</th>
+                                    <th>Email</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -48,27 +44,42 @@
                                 <%
                                     for (int i = 0; i < dataPenyewa.length; i++) {%>
 
-                                    <tr class="spacer"></tr>
-                                <tr class="tr-shadow">
+                                <tr class="spacer"></tr>
+                                <!--<tr class="tr-shadow">-->
                                     <td>
                                         <label class="au-checkbox">
                                             <% out.print((i + 1)); %>
                                         </label>
                                     </td>
 
+                                    <td> 
+                                        <% out.print(dataPenyewa[i].getPenyewa_namadepan() + " " + dataPenyewa[i].getPenyewa_namabelakang()); %>
+                                    </td>
 
-                                    <td> <% out.print(dataPenyewa[i].getPenyewa_namadepan()+" "+dataPenyewa[i].getPenyewa_namabelakang()); %></td>
+                                    <td >
+                                        <%out.print(dataPenyewa[i].getPenyewa_tgllahir());%>
+                                    </td>
+
+                                    <td> 
+                                        <% out.print(dataPenyewa[i].getPenyewa_jk()); %>
+                                    </td>
 
                                     <td>
-                                        <span class="block-email"><% out.print(dataPenyewa[i].getPenyewa_email());%></span>
+                                        <span class="status--process"><% out.print(dataPenyewa[i].getPenyewa_notlp()); %></span>
                                     </td>
-                                    <td class="desc">iPhone X 64Gb Grey</td>
-                                    <td>2018-09-29 05:57</td>
                                     <td>
-                                        <span class="status--process">Processed</span>
+                                        <span class="block-email">
+                                            <%
+                                                out.print(dataPenyewa[i].getPenyewa_email());
+                                            %>
+
+                                        </span>
                                     </td>
-                                    <td>$999.00</td>
-                                    <%}%>
+
+                                    <td>
+                                        <%out.print(dataPenyewa[i].getPenyewa_alamat());%>
+                                    </td>
+
                                     <td>
                                         <div class="table-data-feature">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
@@ -85,9 +96,11 @@
                                             </button>
                                         </div>
                                     </td>
+                                     <td>
+                                       
+                                    </td>
                                 </tr>
-
-                                </tr>
+                                <%}%>
                             </tbody>
                         </table>
                     </div>

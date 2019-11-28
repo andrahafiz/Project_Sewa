@@ -1,10 +1,10 @@
 SMAP
-Penyewa_jsp.java
+Barang_jsp.java
 JSP
 *S JSP
 *F
-+ 0 Penyewa.jsp
-Admin/Penyewa.jsp
++ 0 Barang.jsp
+Admin/Barang.jsp
 *L
 5,5:46
 9,3:50
