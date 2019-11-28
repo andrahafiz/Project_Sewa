@@ -10,7 +10,8 @@ package Barang;
  * @author Abdul
  */
 public class Brg {
-    private String barang_id, barang_nama,  barang_deskripsi, barang_foto, barang_status, barang_kondisi, barang_kategori;
+    private String barang_id, barang_nama,  barang_deskripsi, barang_foto, barang_kondisi, barang_kategori;
+    private boolean barang_status;
     private int barang_harga;
     
     public String getId() {
@@ -53,11 +54,11 @@ public class Brg {
         this.barang_foto = barang_foto;
     }
 
-    public String getStatus() {
+    public boolean getStatus() {
         return barang_status;
     }
 
-    public void setStatus(String barang_status) {
+    public void setStatus(boolean barang_status) {
         this.barang_status = barang_status;
     }
 

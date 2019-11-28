@@ -4,9 +4,17 @@
         <servlet-name>DataBrg</servlet-name>
         <servlet-class>Barang.DataBrg</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>Barang.Test</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DataBrg</servlet-name>
         <url-pattern>/DataBrg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/Test</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

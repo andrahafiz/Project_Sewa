@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class DataBrg extends HttpServlet {
+public class Test extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,39 +30,17 @@ public class DataBrg extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         PrintWriter out = response.getWriter();
-        try {
-            BrgFacade Brg = new BrgFacade();
-            Brg brg = null;
-            Brg[] dataBrg = Brg.getDataBrg();
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Daftar Salon</title>");
+            out.println("<title>Servlet Test</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Daftar Salon Apasaja</h1>");
-            out.println("<hr//>");
-            out.println("<table border=1>"
-                    + "<tr>"
-                    + "<td>Nama Rumah Sakit</td>"
-                    + "<td>Alamat</td>"
-                    + "<td>Kode Pos</td>"
-                    + "<td>Telp</td>"
-                    + "<td>Email</td>"
-                    + "</tr>");
-            for (int i = 0; i < dataBrg.length; i++) {
-                out.println("<tr>"
-                        + "<td><a href=Datars?kode="+dataBrg[i].getId()+">"
-                        + dataBrg[i].getKategori() + "</td>"
-                        + "</tr>");
-            }
-            out.println("</table>");
+            out.println("<h1>Servlet Test at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        } finally {
-            out.close();
         }
     }
 
