@@ -1,0 +1,9 @@
+BRG001	Mobilan Anak	25000	"Untuk Barang Tersedia Dengan variasi warna merah, kuning dan hijau. Untuk kontrol dapat dilakukan dengan remote maupun dikendarai sendiri.
+"	BRG001.jpg	true	Sangat Baik	Mainan
+BRG002	Vacum Cleaner	100000	Barang ini dapat digunakan untuk membersihkan rumah hingga bersih. Mudah dibawa dan dapat disimpan ditempat yang cukup lapang.	Brg2.jpg	true	Baik	Rumah Tangga
+BRG003	Tenda Acara	150000	Barang memiliki tinggi 2,5 meter dan mempunyai panjang dan lebar 4x4. Untuk warna tenda hanya tersedia Merah putih, abu abu Maron dan kuning Biru.	Brg3.jpg	true	Sangat Baik	Acara
+BRG004	Keranjang Bayi	120000	Terdapat keranjang bayi yang mempunyai tempat meletakkan barang barang keperluan bayi. Untuk merk Yamago buatan Rusia.	Brg4.jpg	true	Baik	Peralatan Bayi
+
+
+INSERT INTO ROOT.TB_BARANG (BARANG_ID, BARANG_NAMA, BARANG_HARGA, BARANG_DESKRIPSI, BARANG_FOTO, BARANG_STATUS, BARANG_KONDISI, KATEGORI_ID) 
+	VALUES ('BRG0001', 'Mobilan Anak', 25000, 'Untuk Barang Tersedia Dengan variasi warna merah, kuning dan hijau. Untuk kontrol dapat dilakukan dengan remote maupun dikendarai sendiri.', 'BRG001.jpg', true, 'Baik', 'Mainan')
