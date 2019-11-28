@@ -48,8 +48,9 @@
 				<div class="col-first">
 					<h1>Login/Register</h1>
 					<nav class="d-flex align-items-center">
-						<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-						<a href="category.html">Login/Register</a>
+						<a href="index.jsp">Home<span class="lnr lnr-arrow-right"></span></a>
+						<a href="login.jsp">Login</a>
+                                                <a href="registrasi.jsp">/Register</a>
 					</nav>
 				</div>
 			</div>
@@ -61,19 +62,9 @@
 	<section class="login_box_area section_gap">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
-					<div class="login_box_img">
-						<img class="img-fluid" src="img/login.jpg" alt="">
-						<div class="hover">
-							<h4>Anda Sudah Memiliki Akun?</h4>
-							<p>Masuk Ke Menu Login Untuk Melakukan Login</p>
-							<a class="primary-btn" href="login.jsp">Klik Disini</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-12">
 					<div class="login_form_inner">
-						<h3>Registrasi</h3>
+                                            <h3>Registrasi</h3><br>
 						<form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
 							
 						
@@ -120,7 +111,7 @@
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="primary-btn">Log In</button>
-								<a href="#">Forgot Password?</a>
+								<a href="login.jsp">Sudah Memiliki Akun</a>
 							</div>
 
 							
