@@ -15,36 +15,11 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-<<<<<<< HEAD
-							<li class="nav-item active"><a class="nav-link" href="index.jsp?hlm=index.jsp">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="category.html">Kategori Sewa</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-									<li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Login</a></li>
-=======
 							<li class="nav-item"><a class="nav-link" href="index.jsp">Beranda</a></li>
 							<li class="nav-item"><a class="nav-link" href="kategori.jsp">Kategori Sewa</a></li>
 							<li class="nav-item"><a class="nav-link" href="about.jsp">Hubungi Kami</a></li>
                                                         <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
 							<li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
->>>>>>> a0cb83c21829eb59b0c2c2e7db05ae47caef712e
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="login.jsp"><span class="fa fa-user-circle"></span></a>
