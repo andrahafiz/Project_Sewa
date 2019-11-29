@@ -3,11 +3,11 @@
     Created on : Nov 28, 2019, 11:50:38 PM
     Author     : User
 --%>
-<%@page import="Admin.Methods" %>
+<%@page import="Admin.Method_Barang" %>
 <%@page import="Admin.J_Barang" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%Methods kategorifcd = new Methods();
-    J_Barang[] dataPenyewa = kategorifcd.getDataBarang();
+<%Method_Barang kategorifcd = new Method_Barang();
+    J_Barang[] dataBarang = kategorifcd.getDataBarang();
 %>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -28,28 +28,42 @@
                                 <tr>
                                     <th>No</th>
                                     <th>ID Barang</th>
-                                    <th>type</th>
-                                    <th>description</th>
-                                    <th>status</th>
-                                    <th>price</th>
+                                    <th>Nama</th>
+                                    <th>Kategori</th>
+                                    <th>Harga</th>
+                                    <th>Kondisi</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <%
+                                    for (int i = 0; i < dataBarang.length; i++) {%>
                                 <tr>
-                                    <td>2018-09-29 05:57</td>
-                                    <td>2018-09-29 05:57</td>
-                                    <td>Mobile</td>
-                                    <td>iPhone X 64Gb Grey</td>
-                                    <td class="process">Processed</td>
-                                    <td>$999.00</td>
+                                    <td> <% out.print((i + 1)); %></td>
+                                    <td> <% out.print(dataBarang[i].getBarang_id()); %></td>
+                                    <td> <% out.print(dataBarang[i].getBarang_nama()); %></td>
+
+                                    <td><% out.print(dataBarang[i].getKategori_id()); %></td>
+                                    <td>RP. <% out.print(dataBarang[i].getBarang_harga()); %></td>
+                                    <%
+                                        boolean status = dataBarang[i].isBarang_status();
+                                        String keterangan = "";
+                                        String warna = "";
+                                        if (status == true) {
+                                            keterangan = "Ada";
+                                            warna ="process";
+                                        } else {
+                                            keterangan = "Di Pinjam";
+                                            warna ="denied";
+                                        }
+
+                                        out.print("<td class='"+warna+"'>");
+                                        out.print(keterangan);
+                                        out.print("</td>");
+                                    %>
+                                    <td><span class="role user"><% out.print(dataBarang[i].getBarang_keadaan()); %></span></td>
                                 </tr>
-                                <tr>
-                                    <td>2018-09-27 02:12</td>
-                                    <td>Game</td>
-                                    <td>Game Console Controller</td>
-                                    <td class="denied">Denied</td>
-                                    <td>$22.00</td>
-                                </tr>
+                                <% }%>
 
                             </tbody>
                         </table>
