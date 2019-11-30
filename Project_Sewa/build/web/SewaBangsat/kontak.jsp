@@ -46,7 +46,7 @@
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Contact Us</h1>
+					<h1>Hubungi Kami</h1>
 					<nav class="d-flex align-items-center">
 						<a href="index.jsp">Home<span class="lnr lnr-arrow-right"></span></a>
 						<a href="kontak.jsp">Hubungi Kami</a>
@@ -57,59 +57,85 @@
 	</section>
 	<!-- End Banner Area -->
 
-	<!--================Contact Area =================-->
-	<section class="contact_area section_gap_bottom">
+        <!--================Contact Area =================-->
+	<section class="login_box_area section_gap">
 		<div class="container">
-			<div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13" data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-			 data-mlat="40.701083" data-mlon="-74.1522848">
-			</div>
 			<div class="row">
-				<div class="col-lg-3">
-					<div class="contact_info">
-						<div class="info_item">
-							<i class="lnr lnr-home"></i>
-							<h6>California, United States</h6>
-							<p>Santa monica bullevard</p>
-						</div>
-						<div class="info_item">
-							<i class="lnr lnr-phone-handset"></i>
-							<h6><a href="#">00 (440) 9865 562</a></h6>
-							<p>Mon to Fri 9am to 6 pm</p>
-						</div>
-						<div class="info_item">
-							<i class="lnr lnr-envelope"></i>
-							<h6><a href="#">support@colorlib.com</a></h6>
-							<p>Send us your query anytime!</p>
-						</div>
-					</div>
+				<div class="col-lg-4">
+					
 				</div>
-				<div class="col-lg-9">
-					<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'">
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"></textarea>
-							</div>
-						</div>
-						<div class="col-md-12 text-right">
-							<button type="submit" value="submit" class="primary-btn">Send Message</button>
-						</div>
-					</form>
+				<div class="col-lg-6">
+                                    <div class="login_form_inner" style="padding-bottom: 90px">
+						<h3>Hubungi Kami</h3>
+						<form class="row login_form" action="ceklogin.jsp" method="post" id="contactForm" novalidate="novalidate">
+                                                    <div class="col-md-6 form-group">
+                                                        <input type="text" class="form-control" id="name" name="nama_depan" placeholder="Nama Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Lengkap'">
+                                                    </div>
+                                                    <div class="col-md-6 form-group">
+                                                        <input type="text" class="form-control" id="name" name="nama_belakang" placeholder="Alamat Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Email'">
+                                                    </div>
+                                                    <div class="col-md-4 form-group">
+                                                        <input type="text" class="form-control" id="name" name="nama_depan" placeholder="Subjek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subjek'">
+                                                    </div>
+                                                    <div class="col-md-8 form-group" style="padding-top: 14px">
+                                                        <div class="form-select" id="default-select">
+                                                            <select name="jenis">
+                                                                <option>Pilih Topik</option>
+                                                                <option value="kritik dan saran">Kritik & Saran</option>
+                                                                <option value="konten yang ada">Konten Yang Ada</option>
+                                                                <option value="design">Design</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group">
+                                                        <textarea class="single-textarea" name="alamat" placeholder="Pesan Anda" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pesan Anda'"
+                                                                  required></textarea>
+                                                    </div>
+                                                    <div class="col-md-12 form-group" style="padding-top: 10px">
+							<button type="submit" value="submit" class="primary-btn">Log In</button>
+                                                    </div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--================Contact Area =================-->
+        
+	<!--================Contact Area =================-->
+	<section class="contact_area section_gap_bottom">
+		<div class="container">
+			<div class="row">
+                            <div class="col-lg-4"></div>
+				<div class="col-lg-6">
+                                    <center>
+					<div class="contact_info">
+						<div class="info_item">
+							<i class="lnr lnr-home"></i>
+							<h6>Pekanbaru, Riau, Indonesia</h6>
+							<p>Jalan Sudirman No 43</p>
+						</div>
+                                                <div class="info_item">
+							<i class="lnr lnr-calendar-full"></i>
+							<h6>Pelayanan Consumer</h6>
+							<p>Senin Hingga Jum'at <br>Dari Jam 8 Pagi Hingga 10 Malam</p>
+						</div>
+						<div class="info_item">
+							<i class="lnr lnr-phone-handset"></i>
+							<h6>Untuk Informasi Lebih Detail Dapat Menghubungi</h6>
+							<p>No. 0813726180</p>
+						</div>
+					</div>
+                                    </center>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!--================Contact Area =================-->
+        
+        
+        
         
 <%@include file="footer.jsp" %>
 

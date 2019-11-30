@@ -30,8 +30,9 @@
                                 </div>
                             </div>
                             <!-- single-slide -->
-                            <div class="row single-slide">
-                                <div class="col-lg-5">
+                            <!-- single-slide -->
+                            <div class="row single-slide align-items-center d-flex">
+                                <div class="col-lg-5 col-md-6">
                                     <div class="banner-content">
                                         <h1>Sewa Camera<br>Collection!</h1>
                                         <p>Kategori Yang paling sering disewa</p>
@@ -47,6 +48,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- single-slide -->
                         </div>
                     </div>
                 </div>

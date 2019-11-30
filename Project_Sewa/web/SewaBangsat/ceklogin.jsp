@@ -25,7 +25,7 @@
 //        out.println("welcome " + userid);
 //        out.println("password " + pwd);
 //        out.println("<a href='logout.jsp'>Log out</a>");
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("../Pengguna/index.jsp");
     } else {
 //        out.println("welcome " + userid);
 //        out.println("password " + pwd);

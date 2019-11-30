@@ -4,7 +4,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-                                        <a class="navbar-brand logo_h" href="index.html"><img src="img/Logo.png" width="190px" height="80px"alt="" ></a>
+                                        <a class="navbar-brand logo_h" href="index.html"><img src="img/Logo.png" width="220px" height="70px"alt="" ></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@
 							<li class="nav-item"><a class="nav-link" href="index.jsp">Beranda</a></li>
 							<li class="nav-item"><a class="nav-link" href="kategori.jsp">Kategori Sewa</a></li>
 							<li class="nav-item"><a class="nav-link" href="kontak.jsp">Hubungi Kami</a></li>
-                                                        <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="about.jsp">Tentang Kami</a></li>
 							<li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">

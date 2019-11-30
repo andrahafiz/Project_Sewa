@@ -68,6 +68,9 @@
                             <form class="row login_form" action="cekregis.jsp" method="post" id="contactForm" novalidate="novalidate" style="
                                   max-width: 800px;
                                   ">
+                                <div class="col-md-12 form-group">
+                                    <input type="text" class="form-control" id="name" name="id" placeholder="Nomor KTP/Identitas" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nomor KTP/Identitas'">
+                                </div>
                                 <div class="col-md-6 form-group">
                                     <input type="text" class="form-control" id="name" name="nama_depan" placeholder="Nama Depan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Depan'">
                                 </div>
