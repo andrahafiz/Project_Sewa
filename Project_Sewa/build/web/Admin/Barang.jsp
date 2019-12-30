@@ -31,8 +31,9 @@
                                     <th>Nama</th>
                                     <th>Kategori</th>
                                     <th>Harga</th>
-                                    <th>Kondisi</th>
                                     <th>Status</th>
+                                    <th>Kondisi</th>
+                                    <th><center>Aksi</center></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,7 +44,7 @@
                                     <td> <% out.print(dataBarang[i].getBarang_id()); %></td>
                                     <td> <% out.print(dataBarang[i].getBarang_nama()); %></td>
 
-                                    <td><% out.print(dataBarang[i].getKategori_id()); %></td>
+                                    <td><% out.print(dataBarang[i].getKategori_nama()); %></td>
                                     <td>RP. <% out.print(dataBarang[i].getBarang_harga()); %></td>
                                     <%
                                         boolean status = dataBarang[i].isBarang_status();
@@ -51,17 +52,30 @@
                                         String warna = "";
                                         if (status == true) {
                                             keterangan = "Ada";
-                                            warna ="process";
+                                            warna = "process";
                                         } else {
                                             keterangan = "Di Pinjam";
-                                            warna ="denied";
+                                            warna = "denied";
                                         }
 
-                                        out.print("<td class='"+warna+"'>");
+                                        out.print("<td class='" + warna + "'>");
                                         out.print(keterangan);
                                         out.print("</td>");
                                     %>
                                     <td><span class="role user"><% out.print(dataBarang[i].getBarang_keadaan()); %></span></td>
+                                    <td colspan="">
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
+                                                <i class="zmdi zmdi-format-list-bulleted"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <% }%>
 

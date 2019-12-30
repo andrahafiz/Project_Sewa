@@ -12,9 +12,25 @@ package Admin;
  */
 public class J_Barang {
 
-    private String barang_id, barang_nama, toko_id, kategori_id, barang_deskripsi, barang_foto,barang_keadaan;
+    private String barang_id, barang_nama, kategori_nama,barang_satuan, kategori_id, barang_deskripsi, barang_foto,barang_keadaan,barang_maintenance;
     private boolean barang_status;
     private int barang_harga;
+
+    public String getBarang_satuan() {
+        return barang_satuan;
+    }
+
+    public void setBarang_satuan(String barang_satuan) {
+        this.barang_satuan = barang_satuan;
+    }
+
+    public String getKategori_nama() {
+        return kategori_nama;
+    }
+
+    public void setKategori_nama(String kategori_nama) {
+        this.kategori_nama = kategori_nama;
+    }
 
     public String getBarang_id() {
         return barang_id;
@@ -32,13 +48,14 @@ public class J_Barang {
         this.barang_nama = barang_nama;
     }
 
-    public String getToko_id() {
-        return toko_id;
+    public String getBarang_maintenance() {
+        return barang_maintenance;
     }
 
-    public void setToko_id(String toko_id) {
-        this.toko_id = toko_id;
+    public void setBarang_maintenance(String barang_maintenance) {
+        this.barang_maintenance = barang_maintenance;
     }
+ 
 
     public String getKategori_id() {
         return kategori_id;
@@ -88,6 +105,5 @@ public class J_Barang {
         this.barang_harga = barang_harga;
     }
 
-    
 
 }

@@ -6,8 +6,8 @@
 <%@page import="Admin.Methods" %>
 <%@page import="Admin.J_Penyewa" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%Methods kategorifcd = new Methods();
-    J_Penyewa[] dataPenyewa = kategorifcd.getDataPenyewa();
+<%Methods penyewafcd = new Methods();
+    J_Penyewa[] dataPenyewa = penyewafcd.getDataPenyewa();
 %>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -37,7 +37,6 @@
                                     <th>Email</th>
                                     <th>Alamat</th>
                                     <th>Aksi</th>
-                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -80,7 +79,7 @@
                                 <%out.print(dataPenyewa[i].getPenyewa_alamat());%>
                             </td>
 
-                            <td>
+                            <td colspan="2">
                                 <div class="table-data-feature">
                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
                                         <i class="zmdi zmdi-format-list-bulleted"></i>
@@ -93,9 +92,7 @@
                                     </button>
                                 </div>
                             </td>
-                            <td>
-
-                            </td>
+                          
                             </tr>
                             <%}%>
                             </tbody>
