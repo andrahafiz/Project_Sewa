@@ -17,9 +17,24 @@
 <div class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 class="title-3 ">
+                                        <i class="zmdi zmdi-account-calendar"></i>user data</h3>
+                </div>
+                <div class="col-md-2">
+                       
+                        <div class="table-data__tool-left">
+                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                <i class="zmdi zmdi-plus"></i>add item</button>
+                            
+                    </div>
+                </div>
+            </div>
 
 
-            <div class="row m-t-30">
+            <div class="row m-t-20">
                 <div class="col-md-12">
                     <!-- DATA TABLE-->
                     <div class="table-responsive m-b-40">
@@ -34,7 +49,7 @@
                                     <th>Status</th>
                                     <th>Kondisi</th>
                                     <th><center>Aksi</center></th>
-                                </tr>
+                            </tr>
                             </thead>
                             <tbody>
                                 <%

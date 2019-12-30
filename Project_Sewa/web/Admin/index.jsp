@@ -60,11 +60,13 @@
                 %>
                 <%@include file="content.jsp" %>
                 <%
-                } else if(kategori.equalsIgnoreCase("Penyewa")){%>
+                } else if (kategori.equalsIgnoreCase("Penyewa")) {%>
                 <%@include file="../Admin/Penyewa.jsp" %>
-                <% } else if(kategori.equalsIgnoreCase("Barang")){%>
+                <% } else if (kategori.equalsIgnoreCase("Barang")) {%>
                 <%@include file="../Admin/Barang.jsp" %>
-                <% }%>
+                <% } else if (kategori.equalsIgnoreCase("InputBarang")) {%>
+                <%@include file="../Admin/InputBarang.jsp" %>
+                <%}%>
 
                 <!-- END MAIN CONTENT-->
                 <!-- END PAGE CONTAINER-->

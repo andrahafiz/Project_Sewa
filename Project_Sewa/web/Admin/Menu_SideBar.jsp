@@ -30,6 +30,10 @@
                                 <i class="fas fa-chart-bar"></i>Data Barang</a>
                         </li>
                         <li>
+                            <a href="index.jsp?hlm=InputBarang">
+                                <i class="far fa-check-square"></i>Input Data Barang</a>
+                        </li>
+                        <li>
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
