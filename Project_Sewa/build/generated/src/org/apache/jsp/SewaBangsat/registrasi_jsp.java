@@ -91,7 +91,7 @@ public final class registrasi_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<nav class=\"navbar navbar-expand-lg navbar-light main_box\">\r\n");
       out.write("\t\t\t\t<div class=\"container\">\r\n");
       out.write("\t\t\t\t\t<!-- Brand and toggle get grouped for better mobile display -->\r\n");
-      out.write("\t\t\t\t\t<a class=\"navbar-brand logo_h\" href=\"index.html\"><img src=\"img/logo.png\" alt=\"\"></a>\r\n");
+      out.write("                                        <a class=\"navbar-brand logo_h\" href=\"index.html\"><img src=\"img/Logo.png\" width=\"220px\" height=\"70px\"alt=\"\" ></a>\r\n");
       out.write("\t\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"\r\n");
       out.write("\t\t\t\t\t\tdata-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\r\n");
       out.write("\t\t\t\t\t\taria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n");
@@ -105,7 +105,7 @@ public final class registrasi_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"index.jsp\">Beranda</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"kategori.jsp\">Kategori Sewa</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"kontak.jsp\">Hubungi Kami</a></li>\r\n");
-      out.write("                                                        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Tentang Kami</a></li>\r\n");
+      out.write("                                                        <li class=\"nav-item\"><a class=\"nav-link\" href=\"about.jsp\">Tentang Kami</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"login.jsp\">Login</a></li>\r\n");
       out.write("\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\r\n");
@@ -158,9 +158,12 @@ public final class registrasi_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"col-lg-12\">\n");
       out.write("                        <div class=\"login_form_inner\">\n");
       out.write("                            <h3>Registrasi</h3><br>\n");
-      out.write("                            <form class=\"row login_form\" action=\"contact_process.php\" method=\"post\" id=\"contactForm\" novalidate=\"novalidate\" style=\"\n");
+      out.write("                            <form class=\"row login_form\" action=\"cekregis.jsp\" method=\"post\" id=\"contactForm\" novalidate=\"novalidate\" style=\"\n");
       out.write("                                  max-width: 800px;\n");
       out.write("                                  \">\n");
+      out.write("                                <div class=\"col-md-12 form-group\">\n");
+      out.write("                                    <input type=\"text\" class=\"form-control\" id=\"name\" name=\"id\" placeholder=\"Nomor KTP/Identitas\" onfocus=\"this.placeholder = ''\" onblur=\"this.placeholder = 'Nomor KTP/Identitas'\">\n");
+      out.write("                                </div>\n");
       out.write("                                <div class=\"col-md-6 form-group\">\n");
       out.write("                                    <input type=\"text\" class=\"form-control\" id=\"name\" name=\"nama_depan\" placeholder=\"Nama Depan\" onfocus=\"this.placeholder = ''\" onblur=\"this.placeholder = 'Nama Depan'\">\n");
       out.write("                                </div>\n");
@@ -178,6 +181,15 @@ public final class registrasi_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                </div>\n");
       out.write("                                <div class=\"col-md-12 form-group\">\n");
       out.write("                                    <input type=\"password\" class=\"form-control\" id=\"name\" name=\"password\" placeholder=\"Re-Password\" onfocus=\"this.placeholder = ''\" onblur=\"this.placeholder = 'Re-Password'\">\n");
+      out.write("                                </div>\n");
+      out.write("                                <div class=\"col-md-4 form-group\">\n");
+      out.write("                                    <input type=\"text\" class=\"form-control\" id=\"name\" name=\"tanggal\" placeholder=\"Tanggal\" onfocus=\"this.placeholder = ''\" onblur=\"this.placeholder = 'Tanggal'\">\n");
+      out.write("                                </div>\n");
+      out.write("                                <div class=\"col-md-4 form-group\">\n");
+      out.write("                                    <input type=\"text\" class=\"form-control\" id=\"name\" name=\"bulan\" placeholder=\"Bulan\" onfocus=\"this.placeholder = ''\" onblur=\"this.placeholder = 'Bulan'\">\n");
+      out.write("                                </div>\n");
+      out.write("                                <div class=\"col-md-4 form-group\">\n");
+      out.write("                                    <input type=\"text\" class=\"form-control\" id=\"name\" name=\"tahun\" placeholder=\"Tahun\" onfocus=\"this.placeholder = ''\" onblur=\"this.placeholder = 'Tahun'\">\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"col-md-4 form-group\">\n");
       out.write("                                    <div class=\"form-select\" id=\"default-select\">\n");

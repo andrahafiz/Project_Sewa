@@ -9,43 +9,23 @@
 	<footer class="footer-area section_gap">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3  col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6>Tentang Kami</h6>
-						<p>
-							Any Questions? Let us know in store at 3th floor, Umban Sari No.22, Pekanbaru, 18726 or call us on (+62) 813 243 2343.
-						</p>
-					</div>
-				</div>
-                                <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="col-lg-4 col-md-6 col-sm-6" style="padding-left: 200px">
 					<div class="single-footer-widget">
 						<h6>Follow Us</h6>
 						<p>Untuk Media Sosial Kami</p>
 						<div class="footer-social d-flex align-items-center">
 							<a href="#"><i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="#"><i class="fa fa-twitch"></i></a>
 						</div>
 					</div>
 				</div>
+				
+                                
+				
 				<div class="col-lg-3  col-md-6 col-sm-6">
-					<div class="single-footer-widget mail-chimp">
-						<h6 class="mb-20">Instragram Feed</h6>
-						<ul class="instafeed d-flex flex-wrap">
-							<li><img src="img/i1.jpg" alt=""></li>
-							<li><img src="img/i2.jpg" alt=""></li>
-							<li><img src="img/i3.jpg" alt=""></li>
-							<li><img src="img/i4.jpg" alt=""></li>
-							<li><img src="img/i5.jpg" alt=""></li>
-							<li><img src="img/i6.jpg" alt=""></li>
-							<li><img src="img/i7.jpg" alt=""></li>
-							<li><img src="img/i8.jpg" alt=""></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4  col-md-6 col-sm-6">
-					<div class="single-footer-widget">
+<!--					<div class="single-footer-widget">
 						<h6>Newsletter</h6>
 						<p>Stay update with our latest</p>
 						<div class="" id="mc_embed_signup">
@@ -68,26 +48,36 @@
 											type="text">
 									</div>
 
-									<!-- <div class="col-lg-4 col-md-4">
+									 <div class="col-lg-4 col-md-4">
 												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-											</div>  -->
+											</div>  
 								</div>
 								<div class="info"></div>
 							</form>
 						</div>
+					</div>-->
+				</div>
+                            <div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Tentang Kami</h6>
+						<p>
+							Any Questions? Let us know in store at 3th floor, Umban Sari No.22, Pekanbaru, 18726 or call us on (+62) 813 243 2343.
+						</p>
 					</div>
 				</div>
 			</div>
 			<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                            <center>
 				<p class="footer-text m-0">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>
-						document.write(new Date().getFullYear());</script>All rights reserved | 
-                                                This template is made with <i class="fa fa-heart"
+					&copy;Copyright <script>
+                                            document.write(new Date().getFullYear());</script>. All rights reserved <br> 
+                                                Template <i class="fa fa-heart"
 						aria-hidden="true"></i> by <a href="#" target="_blank">Andra Al-Hafiz Hasibuan</a>
-                                                And <a href="#" target="_blank">Abdul Aziz Fakhrul S</a>
+                                                Dan <a href="#" target="_blank">Abdul Aziz Fakhrul S</a>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</p>
+                            </center>
 			</div>
 		</div>
 	</footer>

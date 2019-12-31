@@ -54,9 +54,8 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <div class=\"row single-slide align-items-center d-flex\">\r\n");
       out.write("                                <div class=\"col-lg-5 col-md-6\">\r\n");
       out.write("                                    <div class=\"banner-content\">\r\n");
-      out.write("                                        <h1>Nike New <br>Collection!</h1>\r\n");
-      out.write("                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et\r\n");
-      out.write("                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>\r\n");
+      out.write("                                        <h1>Sewa Camera<br>Collection!</h1>\r\n");
+      out.write("                                        <p>Kategori Yang paling sering disewa</p>\r\n");
       out.write("                                        <div class=\"add-bag d-flex align-items-center\">\r\n");
       out.write("                                            <a class=\"add-btn\" href=\"\"><span class=\"lnr lnr-cross\"></span></a>\r\n");
       out.write("                                            <span class=\"add-text text-uppercase\">Add to Bag</span>\r\n");
@@ -70,12 +69,12 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                </div>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <!-- single-slide -->\r\n");
-      out.write("                            <div class=\"row single-slide\">\r\n");
-      out.write("                                <div class=\"col-lg-5\">\r\n");
+      out.write("                            <!-- single-slide -->\r\n");
+      out.write("                            <div class=\"row single-slide align-items-center d-flex\">\r\n");
+      out.write("                                <div class=\"col-lg-5 col-md-6\">\r\n");
       out.write("                                    <div class=\"banner-content\">\r\n");
-      out.write("                                        <h1>Nike New <br>Collection!</h1>\r\n");
-      out.write("                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et\r\n");
-      out.write("                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>\r\n");
+      out.write("                                        <h1>Sewa Camera<br>Collection!</h1>\r\n");
+      out.write("                                        <p>Kategori Yang paling sering disewa</p>\r\n");
       out.write("                                        <div class=\"add-bag d-flex align-items-center\">\r\n");
       out.write("                                            <a class=\"add-btn\" href=\"\"><span class=\"lnr lnr-cross\"></span></a>\r\n");
       out.write("                                            <span class=\"add-text text-uppercase\">Add to Bag</span>\r\n");
@@ -88,6 +87,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    </div>\r\n");
       out.write("                                </div>\r\n");
       out.write("                            </div>\r\n");
+      out.write("                            <!-- single-slide -->\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");

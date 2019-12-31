@@ -61,12 +61,26 @@
 	<section class="login_box_area section_gap">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4">
-					
+				<div class="col-lg-6">
+                                    <div class="contact_info">
+						<div class="info_item">
+							<i class="lnr lnr-home"></i>
+							<h6>Pekanbaru, Riau, Indonesia</h6>
+							<p>Jalan Sudirman No 43</p>
+						</div>
+                                                <div class="info_item">
+							<i class="lnr lnr-calendar-full"></i>
+							<h6>Pelayanan Consumer</h6>
+							<p>Senin Hingga Jum'at <br>Dari Jam 7 Pagi Hingga 10 Malam</p>
+						</div>
+						<div class="info_item">
+							<i class="lnr lnr-phone-handset"></i>
+							<h6>Untuk Informasi Lebih Detail Dapat Menghubungi</h6>
+							<p>No. 0813726180</p>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-6">
-                                    <div class="login_form_inner" style="padding-bottom: 90px">
-						<h3>Hubungi Kami</h3>
 						<form class="row login_form" action="ceklogin.jsp" method="post" id="contactForm" novalidate="novalidate">
                                                     <div class="col-md-6 form-group">
                                                         <input type="text" class="form-control" id="name" name="nama_depan" placeholder="Nama Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Lengkap'">
@@ -91,44 +105,12 @@
                                                         <textarea class="single-textarea" name="alamat" placeholder="Pesan Anda" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pesan Anda'"
                                                                   required></textarea>
                                                     </div>
-                                                    <div class="col-md-12 form-group" style="padding-top: 10px">
-							<button type="submit" value="submit" class="primary-btn">Log In</button>
+                                                    <div class="col-md-4 form-group" style="padding-top: 10px">
+							<button type="submit" value="submit" class="primary-btn">Kirim</button>
                                                     </div>
 						</form>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<!--================Contact Area =================-->
-        
-	<!--================Contact Area =================-->
-	<section class="contact_area section_gap_bottom">
-		<div class="container">
-			<div class="row">
-                            <div class="col-lg-4"></div>
-				<div class="col-lg-6">
-                                    <center>
-					<div class="contact_info">
-						<div class="info_item">
-							<i class="lnr lnr-home"></i>
-							<h6>Pekanbaru, Riau, Indonesia</h6>
-							<p>Jalan Sudirman No 43</p>
-						</div>
-                                                <div class="info_item">
-							<i class="lnr lnr-calendar-full"></i>
-							<h6>Pelayanan Consumer</h6>
-							<p>Senin Hingga Jum'at <br>Dari Jam 8 Pagi Hingga 10 Malam</p>
-						</div>
-						<div class="info_item">
-							<i class="lnr lnr-phone-handset"></i>
-							<h6>Untuk Informasi Lebih Detail Dapat Menghubungi</h6>
-							<p>No. 0813726180</p>
-						</div>
-					</div>
-                                    </center>
-				</div>
-				
 			</div>
 		</div>
 	</section>
