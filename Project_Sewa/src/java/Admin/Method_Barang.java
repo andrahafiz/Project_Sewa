@@ -5,6 +5,7 @@
  */
 package Admin;
 
+import DB.AksesJdbcOdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -17,40 +18,41 @@ import java.util.ArrayList;
  * @author User
  */
 public class Method_Barang {
-      public J_Barang[] getDataBarang() {
+
+    public J_Barang[] getDataBarang() {
         J_Barang[] daftarbarang = null;
-        J_Barang tempKategori = null;
+        J_Barang tempBarang = null;
         ArrayList listSupplier = new ArrayList();
         Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
-
-        String dbUrl = "jdbc:derby://localhost:1527/DB_Projek";
-        String pwd = "root";
+        String pwd = "";
         String login = "root";
-        String sql = "Select * from tb_barang";
+
+        AksesJdbcOdbc akses = new AksesJdbcOdbc("jdbc:mysql://localhost:3306/db_andra", login, pwd);
+        String sql = "SELECT * FROM tb_kategori right JOIN tb_barang ON tb_barang.kategori_id = tb_kategori.kategori_id";
 
         try {
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-            con = DriverManager.getConnection(dbUrl, login, pwd);
+            con = akses.connect();
             stmt = con.createStatement();
             rs = stmt.executeQuery(sql);
 
             String kode_supplier = null;
             while (rs.next()) {
 
-                tempKategori = new J_Barang();
-                tempKategori.setBarang_id(rs.getString("Barang_id"));
-                tempKategori.setBarang_nama(rs.getString("Barang_nama"));
-                tempKategori.setBarang_harga(Integer.parseInt(rs.getString("Barang_harga")));
-                tempKategori.setBarang_deskripsi(rs.getString("Barang_deskripsi"));
-                tempKategori.setKategori_id("Kategori_id");
-                tempKategori.setBarang_gambar(rs.getString("Barang_foto"));
-                tempKategori.setBarang_status(Boolean.parseBoolean(rs.getString("Barang_status")));
-                tempKategori.setBarang_keadaan(rs.getString("Barang_kondisi"));
+                tempBarang = new J_Barang();
+                tempBarang.setBarang_id(rs.getString("Barang_id"));
+                tempBarang.setBarang_nama(rs.getString("Barang_nama"));
+                tempBarang.setBarang_harga(Integer.parseInt(rs.getString("Barang_harga")));
+                tempBarang.setBarang_satuan(rs.getString("Barang_satuan"));
+                tempBarang.setBarang_deskripsi(rs.getString("Barang_deskripsi"));
+                tempBarang.setKategori_id(rs.getString("Kategori_id"));
+                tempBarang.setKategori_nama(rs.getString("kategori_nama"));
+                tempBarang.setBarang_gambar(rs.getString("Barang_foto"));
+                tempBarang.setBarang_status(Boolean.parseBoolean(rs.getString("Barang_status")));
+                tempBarang.setBarang_keadaan(rs.getString("Barang_kondisi"));
 
-
-                listSupplier.add(tempKategori);
+                listSupplier.add(tempBarang);
             }
             daftarbarang = new J_Barang[listSupplier.size()];
             listSupplier.toArray(daftarbarang);
@@ -71,7 +73,8 @@ public class Method_Barang {
             }
         }
     }
-       public J_Barang[] getDataBarangTerurut() {
+
+    public J_Barang[] getDataBarangTerurut() {
         J_Barang[] daftarbarang = null;
         J_Barang tempKategori = null;
         ArrayList listSupplier = new ArrayList();
@@ -101,7 +104,6 @@ public class Method_Barang {
                 tempKategori.setBarang_gambar(rs.getString("Barang_foto"));
                 tempKategori.setBarang_status(Boolean.parseBoolean(rs.getString("Barang_status")));
                 tempKategori.setBarang_keadaan(rs.getString("Barang_kondisi"));
-
 
                 listSupplier.add(tempKategori);
             }
