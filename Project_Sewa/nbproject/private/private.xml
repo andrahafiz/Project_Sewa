@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Project_Sewa/Project_Sewa/web/SewaBangsat/footer.jsp</file>
-            <file>file:/D:/Project_Sewa/Project_Sewa/web/SewaBangsat/index.jsp</file>
-            <file>file:/D:/Project_Sewa/Project_Sewa/web/SewaBangsat/home.jsp</file>
-            <file>file:/D:/Project_Sewa/Project_Sewa/web/SewaBangsat/elements.html</file>
-            <file>file:/D:/Project_Sewa/Project_Sewa/web/SewaBangsat/css/font-awesome.min.css</file>
+            <file>file:/D:/Project_Sewa/Project_Sewa/src/java/Admin/Method_Barang.java</file>
+            <file>file:/D:/Project_Sewa/Project_Sewa/web/Admin/InputBarang.jsp</file>
+            <file>file:/D:/Project_Sewa/Project_Sewa/src/java/Test/Kategori.java</file>
         </group>
     </open-files>
 </project-private>
