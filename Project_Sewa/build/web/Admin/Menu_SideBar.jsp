@@ -3,7 +3,10 @@
     Created on : Nov 29, 2019, 12:08:35 AM
     Author     : User
 --%>
-
+<%
+//    String kategori = request.getParameter("hlm");
+//    out.print(kategori);
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
  <!-- MENU SIDEBAR-->
@@ -16,9 +19,10 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
+                       
                         <li class="active has-sub">
                             <a class="js-arrow" href="index.jsp">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i class="fas fa-tachometer-alt"></i></a>
                            
                         </li>
                         <li>
@@ -29,7 +33,7 @@
                             <a href="index.jsp?hlm=barang">
                                 <i class="fas fa-chart-bar"></i>Data Barang</a>
                         </li>
-                        <li>
+                        <li >
                             <a href="index.jsp?hlm=InputBarang">
                                 <i class="far fa-check-square"></i>Input Data Barang</a>
                         </li>
