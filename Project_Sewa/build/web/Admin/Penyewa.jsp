@@ -8,18 +8,23 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%Methods penyewafcd = new Methods();
     J_Penyewa[] dataPenyewa = penyewafcd.getDataPenyewa();
+//    String a = request.getParameter("status");
+ 
+
 %>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <%--<%@include file="header.jso" %>--%>
 
 <!-- MAIN CONTENT-->
+
+
 <div class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
 
 
             <div class="row">
+               
                 <div class="col-md-12">
                     <!-- DATA TABLE -->
                     <h3 class="title-5 m-b-35">data penyewa</h3>
@@ -36,7 +41,8 @@
                                     <th>Nomor Telp/Hp</th>
                                     <th>Email</th>
                                     <th>Alamat</th>
-                                    <th>Aksi</th>
+                                    <th>Aksi
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -92,7 +98,7 @@
                                     </button>
                                 </div>
                             </td>
-                          
+
                             </tr>
                             <%}%>
                             </tbody>

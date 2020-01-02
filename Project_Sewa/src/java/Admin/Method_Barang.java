@@ -131,9 +131,9 @@ public class Method_Barang {
             }
         }
     }
-    
-    public Kategori[] getDaftarKategori(){
-         Kategori[] dftrkategori = null;
+
+    public Kategori[] getDaftarKategori() {
+        Kategori[] dftrkategori = null;
         Kategori tempkategori = null;
         ArrayList listkategori = new ArrayList();
         Connection con = null;
@@ -156,7 +156,6 @@ public class Method_Barang {
                 tempkategori = new Kategori();
                 tempkategori.setKategori_id(rs.getString("kategori_id"));
                 tempkategori.setKategori_nama(rs.getString("kategori_nama"));
-                
 
                 listkategori.add(tempkategori);
             }
@@ -178,6 +177,34 @@ public class Method_Barang {
                 return dftrkategori;
             }
         }
+    }
+
+    public boolean delete(String kode) {
+        String pwd = "";
+        String login = "root";
+        AksesJdbcOdbc akses = new AksesJdbcOdbc("jdbc:mysql://localhost:3306/db)projek", login, pwd);
+        boolean sukses = false;
+        try {
+            String update = "DELETE FROM tb_barang WHERE barang_id = '" + kode + "'";
+            akses.connect();
+
+            int baris = akses.executeUpdate(update);
+            if (baris > 0) {
+                sukses = true;
+            }
+
+        } catch (ClassNotFoundException x) {
+            x.printStackTrace();
+        } catch (SQLException x) {
+            x.printStackTrace();
+        } finally {
+            try {
+                akses.disconnect();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return sukses;
     }
 
 }

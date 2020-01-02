@@ -9,6 +9,8 @@
 <%@page import="Admin.J_Barang" %>
 <%@page import="Test.Kategori" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!--Mengambil Tanggal sekarang-->
 <%!
     private String getCurrentDate() {
         Date current = new Date();
@@ -17,7 +19,6 @@
         return dateString;
     }%>
 <%
-
     Method_Barang kategorifcd = new Method_Barang();
     J_Barang brg = null;
     brg = (new Method_Barang()).KodeBarang();
@@ -176,14 +177,14 @@
 
                                     <div class="row">
                                         <div class="col-sm-12 m-b-10">
-                                        <input type="file" id="file" name="file" class="form-control-file" type="file"  id="file" onchange="tampilkanPreview(this, 'preview')">
+                                            <input type="file" id="file" name="file" class="form-control-file" type="file"  id="file" onchange="tampilkanPreview(this, 'preview')">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-sm-12">
-                                        <img id="preview" class="img-thumbnail" style="border: 2px solid #ddd" width="320px" src="../Img/non-image.png"/>
-                                        <p class="help-block">File harus PNG.</p>
+                                            <img id="preview" class="img-thumbnail" style="border: 2px solid #ddd" width="320px" src="../Img/non-image.png"/>
+                                            <p class="help-block">File harus PNG.</p>
                                         </div>
                                     </div>
                                 </div>

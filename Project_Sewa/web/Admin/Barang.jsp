@@ -17,20 +17,11 @@
 <div class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
-            
-            <div class="row">
-                <div class="col-md-10">
-                    <h3 class="title-3 ">
-                                        <i class="zmdi zmdi-account-calendar"></i>user data</h3>
-                </div>
-                <div class="col-md-2">
-                       
-                        <div class="table-data__tool-left">
-                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                <i class="zmdi zmdi-plus"></i>add item</button>
-                            
-                    </div>
-                </div>
+
+            <div class="overview-wrap">
+                <h2 class="title-1">Data Barang</h2>
+                <button class="au-btn au-btn-icon au-btn--green">
+                    <i class="zmdi zmdi-plus"></i>Tambah Baru</button>
             </div>
 
 
@@ -45,7 +36,7 @@
                                     <th>ID Barang</th>
                                     <th>Nama</th>
                                     <th>Kategori</th>
-                                    <th>Harga</th>
+                                    <th>Harga / Satuan</th>
                                     <th>Status</th>
                                     <th>Kondisi</th>
                                     <th><center>Aksi</center></th>
@@ -60,7 +51,7 @@
                                     <td> <% out.print(dataBarang[i].getBarang_nama()); %></td>
 
                                     <td><% out.print(dataBarang[i].getKategori_nama()); %></td>
-                                    <td>RP. <% out.print(dataBarang[i].getBarang_harga()); %></td>
+                                    <td>RP. <% out.print(dataBarang[i].getBarang_harga() + " / " +dataBarang[i].getBarang_satuan()); %></td>
                                     <%
                                         boolean status = dataBarang[i].isBarang_status();
                                         String keterangan = "";
@@ -86,9 +77,14 @@
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button>
+                                             <a href='../DeleteBarang?kode=<%= dataBarang[i].getBarang_id()%>'>
+                                            
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                
                                                 <i class="zmdi zmdi-delete"></i>
+                                             
                                             </button>
+                                              </a>
                                         </div>
                                     </td>
                                 </tr>
