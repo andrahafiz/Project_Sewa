@@ -67,7 +67,7 @@
                 <% } else if (kategori.equalsIgnoreCase("InputBarang")) {%>
                 <%@include file="../Admin/InputBarang.jsp" %>
                 <%}%>
-
+                 <%@include file="footer.jsp" %>
                 <!-- END MAIN CONTENT-->
                 <!-- END PAGE CONTAINER-->
             </div>

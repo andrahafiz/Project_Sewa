@@ -26,7 +26,36 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <%--<%@include file="header.jso" %>--%>
+<script>
+    function tampilkanPreview(gambar, idpreview) {
+        //                membuat objek gambar
+        var gb = gambar.files;
 
+        //                loop untuk merender gambar
+        for (var i = 0; i < gb.length; i++) {
+            //                    bikin variabel
+            var gbPreview = gb[i];
+            var imageType = /image.*/;
+            var preview = document.getElementById(idpreview);
+            var reader = new FileReader();
+
+            if (gbPreview.type.match(imageType)) {
+                //                        jika tipe data sesuai
+                preview.file = gbPreview;
+                reader.onload = (function (element) {
+                    return function (e) {
+                        element.src = e.target.result;
+                    };
+                })(preview);
+                //                    membaca data URL gambar
+                reader.readAsDataURL(gbPreview);
+            } else {
+                //                        jika tipe data tidak sesuai
+                alert("Type file tidak sesuai. Khusus image.");
+            }
+        }
+    }
+</script>
 <!-- MAIN CONTENT-->
 <div class="main-content">
     <div class="section__content section__content--p30">
@@ -144,10 +173,21 @@
                                     <label for="file-input" class=" form-control-label">Gambar</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 m-b-10">
+                                        <input type="file" id="file" name="file" class="form-control-file" type="file"  id="file" onchange="tampilkanPreview(this, 'preview')">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                        <img id="preview" class="img-thumbnail" style="border: 2px solid #ddd" width="320px" src="../Img/non-image.png"/>
+                                        <p class="help-block">File harus PNG.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                     <div class="card-footer">
@@ -162,14 +202,6 @@
 
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="copyright">
-                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
