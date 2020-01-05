@@ -71,10 +71,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
 
     String kategori = request.getParameter("hlm");
-    String text = null;
-    if (kategori.equalsIgnoreCase("Penyewa")) {
-         text="active"  ;  
-        
+  
+  
 
       out.write("\r\n");
       out.write("\r\n");
@@ -222,9 +220,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </nav>\r\n");
       out.write("                </div>\r\n");
       out.write("            </aside>\r\n");
-      out.write("            ");
-}
-      out.write("\r\n");
       out.write("            <!-- END MENU SIDEBAR-->\r\n");
       out.write("\r\n");
       out.write("            <!-- PAGE CONTAINER-->\r\n");
@@ -854,19 +849,24 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
 Methods penyewafcd = new Methods();
     J_Penyewa[] dataPenyewa = penyewafcd.getDataPenyewa();
+//    String a = request.getParameter("status");
+ 
+
 
       out.write("\n");
-      out.write("<!DOCTYPE html>\n");
       out.write("<!DOCTYPE html>\n");
       out.write("\n");
       out.write("\n");
       out.write("<!-- MAIN CONTENT-->\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<div class=\"main-content\">\n");
       out.write("    <div class=\"section__content section__content--p30\">\n");
       out.write("        <div class=\"container-fluid\">\n");
       out.write("\n");
       out.write("\n");
       out.write("            <div class=\"row\">\n");
+      out.write("               \n");
       out.write("                <div class=\"col-md-12\">\n");
       out.write("                    <!-- DATA TABLE -->\n");
       out.write("                    <h3 class=\"title-5 m-b-35\">data penyewa</h3>\n");
@@ -883,7 +883,8 @@ Methods penyewafcd = new Methods();
       out.write("                                    <th>Nomor Telp/Hp</th>\n");
       out.write("                                    <th>Email</th>\n");
       out.write("                                    <th>Alamat</th>\n");
-      out.write("                                    <th>Aksi</th>\n");
+      out.write("                                    <th>Aksi\n");
+      out.write("                                    </th>\n");
       out.write("                                </tr>\n");
       out.write("                            </thead>\n");
       out.write("                            <tbody>\n");
@@ -955,7 +956,7 @@ out.print(dataPenyewa[i].getPenyewa_alamat());
       out.write("                                    </button>\n");
       out.write("                                </div>\n");
       out.write("                            </td>\n");
-      out.write("                          \n");
+      out.write("\n");
       out.write("                            </tr>\n");
       out.write("                            ");
 }
@@ -1079,9 +1080,16 @@ Method_Barang kategorifcd = new Method_Barang();
       out.write("                                            <button class=\"item\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Edit\">\r\n");
       out.write("                                                <i class=\"zmdi zmdi-edit\"></i>\r\n");
       out.write("                                            </button>\r\n");
+      out.write("                                             <a href='../DeleteBarang?kode=");
+      out.print( dataBarang[i].getBarang_id());
+      out.write("'>\r\n");
+      out.write("                                            \r\n");
       out.write("                                            <button class=\"item\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Delete\">\r\n");
+      out.write("                                                \r\n");
       out.write("                                                <i class=\"zmdi zmdi-delete\"></i>\r\n");
+      out.write("                                             \r\n");
       out.write("                                            </button>\r\n");
+      out.write("                                              </a>\r\n");
       out.write("                                        </div>\r\n");
       out.write("                                    </td>\r\n");
       out.write("                                </tr>\r\n");
@@ -1114,9 +1122,10 @@ Method_Barang kategorifcd = new Method_Barang();
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!--Mengambil Tanggal sekarang-->\r\n");
       out.write('\r');
       out.write('\n');
-
 
     Method_Barang kategorifcd = new Method_Barang();
     J_Barang brg = null;
@@ -1291,14 +1300,14 @@ Method_Barang kategorifcd = new Method_Barang();
       out.write("\r\n");
       out.write("                                    <div class=\"row\">\r\n");
       out.write("                                        <div class=\"col-sm-12 m-b-10\">\r\n");
-      out.write("                                        <input type=\"file\" id=\"file\" name=\"file\" class=\"form-control-file\" type=\"file\"  id=\"file\" onchange=\"tampilkanPreview(this, 'preview')\">\r\n");
+      out.write("                                            <input type=\"file\" id=\"file\" name=\"file\" class=\"form-control-file\" type=\"file\"  id=\"file\" onchange=\"tampilkanPreview(this, 'preview')\">\r\n");
       out.write("                                        </div>\r\n");
       out.write("                                    </div>\r\n");
-      out.write("                                    \r\n");
+      out.write("\r\n");
       out.write("                                    <div class=\"row\">\r\n");
       out.write("                                        <div class=\"col-sm-12\">\r\n");
-      out.write("                                        <img id=\"preview\" class=\"img-thumbnail\" style=\"border: 2px solid #ddd\" width=\"320px\" src=\"../Img/non-image.png\"/>\r\n");
-      out.write("                                        <p class=\"help-block\">File harus PNG.</p>\r\n");
+      out.write("                                            <img id=\"preview\" class=\"img-thumbnail\" style=\"border: 2px solid #ddd\" width=\"320px\" src=\"../Img/non-image.png\"/>\r\n");
+      out.write("                                            <p class=\"help-block\">File harus PNG.</p>\r\n");
       out.write("                                        </div>\r\n");
       out.write("                                    </div>\r\n");
       out.write("                                </div>\r\n");
