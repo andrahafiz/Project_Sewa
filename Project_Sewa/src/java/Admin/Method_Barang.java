@@ -20,6 +20,68 @@ import Test.Kategori;
  */
 public class Method_Barang {
 
+    public boolean create(J_Barang dataBarang) {
+        AksesJdbcOdbc akses = new AksesJdbcOdbc("jdbc:mysql://localhost:3306/db_projek", "root", "");
+        try {
+            String insert = "INSERT INTO `tb_barang` (`barang_id`, `barang_nama`, `barang_harga`, `barang_satuan`, "
+                    + "`barang_deskripsi`, `barang_foto`, `barang_kondisi`, `barang_maintenance`, `kategori_id`, `barang_status`) "
+                    + "VALUES ('" + dataBarang.getBarang_id() + "', "
+                    + "'" + dataBarang.getKategori_nama() + "', "
+                    + "'" + dataBarang.getBarang_harga() + "', "
+                    + "'" + dataBarang.getBarang_satuan() + "', "
+                    + "'" + dataBarang.getBarang_deskripsi() + "', "
+                    + "'non-image.png', "
+                    + "'" + dataBarang.getBarang_keadaan() + "', "
+                    + "'" + dataBarang.getBarang_maintenance() + "', "
+                    + "'" + dataBarang.getKategori_id() + "', "
+                    + "'" + dataBarang.getBarang_status() + "')";
+            akses.connect();
+            akses.executeUpdate(insert);
+            akses.disconnect();
+            return true;
+        } catch (ClassNotFoundException x) {
+            x.printStackTrace();
+            return false;
+        } catch (SQLException x) {
+            x.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean edit(J_Barang dataBarang) {
+        AksesJdbcOdbc akses = new AksesJdbcOdbc("jdbc:mysql://localhost:3306/db_projek", "root", "");
+        boolean sukses = false;
+        try {
+            String update = "UPDATE `tb_barang` SET "
+                    + "`barang_nama` = '" + dataBarang.getKategori_nama() + "', "
+                    + "`barang_harga` = '" + dataBarang.getBarang_harga() + "', "
+                    + "`barang_satuan` = '" + dataBarang.getBarang_satuan() + "', "
+                    + "`barang_deskripsi` = '" + dataBarang.getBarang_deskripsi() + "', "
+                    + "`barang_foto` = 'non-image.png', "
+                    + "`barang_kondisi` = '" + dataBarang.getBarang_keadaan() + "',"
+                    + "`barang_maintenance` = '" + dataBarang.getBarang_maintenance() + "', "
+                    + "`kategori_id` ='" + dataBarang.getKategori_id() + "', "
+                    + "`barang_status` = '" + dataBarang.getBarang_status() + "' "
+                    + "WHERE `tb_barang`.`barang_id` = '" + dataBarang.getBarang_id() + "'";
+            akses.connect();
+            int baris = akses.executeUpdate(update);
+            if (baris > 0) {
+                sukses = true;
+            }
+        } catch (ClassNotFoundException x) {
+            x.printStackTrace();
+        } catch (SQLException x) {
+            x.printStackTrace();
+        } finally {
+            try {
+                akses.disconnect();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return sukses;
+    }
+
     public J_Barang KodeBarang() {
         J_Barang supp = null;
 

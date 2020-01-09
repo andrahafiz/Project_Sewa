@@ -20,8 +20,10 @@
 
             <div class="overview-wrap">
                 <h2 class="title-1">Data Barang</h2>
+                <a href="index.jsp?hlm=InputBarang">
                 <button class="au-btn au-btn-icon au-btn--green">
                     <i class="zmdi zmdi-plus"></i>Tambah Baru</button>
+                </a>
             </div>
 
 
@@ -37,8 +39,9 @@
                                     <th>Nama</th>
                                     <th>Kategori</th>
                                     <th>Harga / Satuan</th>
-                                    <th>Status</th>
+                                    <!--<th>Status</th>-->
                                     <th>Kondisi</th>
+                                    <th><center>Gambar</center></th>
                                     <th><center>Aksi</center></th>
                             </tr>
                             </thead>
@@ -52,23 +55,24 @@
 
                                     <td><% out.print(dataBarang[i].getKategori_nama()); %></td>
                                     <td>RP. <% out.print(dataBarang[i].getBarang_harga() + " / " +dataBarang[i].getBarang_satuan()); %></td>
-                                    <%
-                                        boolean status = dataBarang[i].isBarang_status();
-                                        String keterangan = "";
-                                        String warna = "";
-                                        if (status == true) {
-                                            keterangan = "Ada";
-                                            warna = "process";
-                                        } else {
-                                            keterangan = "Di Pinjam";
-                                            warna = "denied";
-                                        }
-
-                                        out.print("<td class='" + warna + "'>");
-                                        out.print(keterangan);
-                                        out.print("</td>");
-                                    %>
+                       <%
+//                                        boolean status = dataBarang[i].isBarang_status();
+//                                        String keterangan = "";
+//                                        String warna = "";
+//                                        if (status == true) {
+//                                            keterangan = "Ada";
+//                                            warna = "process";
+//                                        } else {
+//                                            keterangan = "Di Pinjam";
+//                                            warna = "denied";
+//                                        }
+//
+//                                        out.print("<td class='" + warna + "'>");
+//                                        out.print(keterangan);
+//                                        out.print("</td>");
+//                                    %>
                                     <td><span class="role user"><% out.print(dataBarang[i].getBarang_keadaan()); %></span></td>
+                                    <td><center><img class="" src="../Img/<%= dataBarang[i].getBarang_gambar()%>" alt="Card image cap" style="width: 100px; height: 75px;"></center></td>
                                     <td colspan="">
                                         <div class="table-data-feature">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
@@ -87,6 +91,7 @@
                                               </a>
                                         </div>
                                     </td>
+                                   
                                 </tr>
                                 <% }%>
 

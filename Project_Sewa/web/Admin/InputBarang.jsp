@@ -67,14 +67,14 @@
                         <strong>Form Data</strong> Barang
                     </div>
                     <div class="card-body card-block">
-                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <form action="OlahAddBarang.jsp" method="POST" >
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label class=" form-control-label">Kode Barang</label>
                                 </div>
                                 <div class="col-12 col-md-9">
                                     <Strong> <p class="form-control-static"><%= brg.getBarang_id()%></p></strong>
-                                    <input type="hidden" id="text-input" name="nama-input" class="form-control" value=<%= brg.getBarang_id()%>>
+                                    <input type="hidden" id="text-input" name="kode-input" class="form-control" value=<%= brg.getBarang_id()%>>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -87,14 +87,14 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="email-input" class=" form-control-label">Harga Barang / Satuan</label>
+                                    <label for="harga-input" class=" form-control-label">Harga Barang / Satuan</label>
                                 </div>
                                 <div class="col-12 col-md-5">
-                                    <input type="text" id="email-input" name="email-input" placeholder="Rp." class="form-control">
+                                    <input type="text" id="harga-input" name="harga-input" placeholder="Rp." class="form-control">
 
                                 </div>
                                 <div class="col-12 col-md">
-                                    <input type="text" id="satuan-input" name="satuan" placeholder="" class="form-control">
+                                    <input type="text" id="satuan-input" name="satuan-input" placeholder="" class="form-control">
                                     <small class="help-block form-text">Jam / Hari / Minggu / Bulan / Tahun</small>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                                     <label for="select" class=" form-control-label">Kategori Barang</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <select name="select" id="select" class="form-control">
+                                    <select name="kategori" id="select" class="form-control">
                                         <option value="0">Silahkan Pilih</option>
                                         <%
                                             for (int i = 0; i < daftarkategori.length; i++) {%>
@@ -118,7 +118,7 @@
                                     <label for="maintenance-input" class=" form-control-label">Tanggal Maintenance</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="email-input" name="maintenance-input" placeholder='<%= getCurrentDate()%>' class="form-control">
+                                    <input type="text" id="maintenance-input" name="maintenance-input" placeholder='<%= getCurrentDate()%>' value='<%= getCurrentDate()%>' class="form-control">
                                     <small class="help-block form-text">Format : yyyy-MM-dd</small>
 
                                 </div>
@@ -130,7 +130,7 @@
                                     <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Berikan deskripsi pada barang..." class="form-control"></textarea>
+                                    <textarea name="deskripsi-input" id="textarea-input" rows="9" placeholder="Berikan deskripsi pada barang..." class="form-control"></textarea>
                                 </div>
                             </div>
 
@@ -153,12 +153,12 @@
                                     <div class="form-check">
                                         <div class="radio">
                                             <label for="radio1" class="form-check-label ">
-                                                <input type="radio" id="radio1" name="radios" value="Baik" class="form-check-input">Baik
+                                                <input type="radio" id="radio1" name="kondisi" value="Baik" class="form-check-input">Baik
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label for="radio2" class="form-check-label ">
-                                                <input type="radio" id="radio2" name="radios" value="Sedang" class="form-check-input">Sedang
+                                                <input type="radio" id="radio2" name="kondisi" value="Sedang" class="form-check-input">Sedang
                                             </label>
                                         </div>
                                         <div class="radio">
@@ -189,7 +189,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary btn-sm">
@@ -200,6 +199,7 @@
                         </button>
                     </div>
                 </div>
+            </form>
 
             </div>
         </div>

@@ -89,7 +89,15 @@ public class J_Barang {
         this.barang_keadaan = barang_keadaan;
     }
 
-    public boolean isBarang_status() {
+    public String getBarang_foto() {
+        return barang_foto;
+    }
+
+    public void setBarang_foto(String barang_foto) {
+        this.barang_foto = barang_foto;
+    }
+
+    public boolean getBarang_status() {
         return barang_status;
     }
 
