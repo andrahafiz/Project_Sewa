@@ -24,16 +24,15 @@ public class Method_Barang {
         AksesJdbcOdbc akses = new AksesJdbcOdbc("jdbc:mysql://localhost:3306/db_projek", "root", "");
         try {
             String insert = "INSERT INTO `tb_barang` (`barang_id`, `barang_nama`, `barang_harga`, `barang_satuan`, "
-                    + "`barang_deskripsi`, `barang_foto`, `barang_kondisi`, `barang_maintenance`, `kategori_id`, `barang_status`) "
+                    + "`barang_deskripsi`, `barang_foto`, `barang_kondisi`,`barang_kategori`, `barang_status`) "
                     + "VALUES ('" + dataBarang.getBarang_id() + "', "
-                    + "'" + dataBarang.getKategori_nama() + "', "
+                    + "'" + dataBarang.getBarang_nama()+ "', "
                     + "'" + dataBarang.getBarang_harga() + "', "
                     + "'" + dataBarang.getBarang_satuan() + "', "
                     + "'" + dataBarang.getBarang_deskripsi() + "', "
                     + "'non-image.png', "
                     + "'" + dataBarang.getBarang_keadaan() + "', "
-                    + "'" + dataBarang.getBarang_maintenance() + "', "
-                    + "'" + dataBarang.getKategori_id() + "', "
+                    + "'" + dataBarang.getKategori_nama() + "', "
                     + "'" + dataBarang.getBarang_status() + "')";
             akses.connect();
             akses.executeUpdate(insert);
@@ -59,8 +58,7 @@ public class Method_Barang {
                     + "`barang_deskripsi` = '" + dataBarang.getBarang_deskripsi() + "', "
                     + "`barang_foto` = 'non-image.png', "
                     + "`barang_kondisi` = '" + dataBarang.getBarang_keadaan() + "',"
-                    + "`barang_maintenance` = '" + dataBarang.getBarang_maintenance() + "', "
-                    + "`kategori_id` ='" + dataBarang.getKategori_id() + "', "
+                    + "`barang_kategori` ='" + dataBarang.getKategori_nama() + "', "
                     + "`barang_status` = '" + dataBarang.getBarang_status() + "' "
                     + "WHERE `tb_barang`.`barang_id` = '" + dataBarang.getBarang_id() + "'";
             akses.connect();
@@ -150,7 +148,7 @@ public class Method_Barang {
         String login = "root";
 
         AksesJdbcOdbc akses = new AksesJdbcOdbc("jdbc:mysql://localhost:3306/db_andra", login, pwd);
-        String sql = "SELECT * FROM tb_kategori right JOIN tb_barang ON tb_barang.kategori_id = tb_kategori.kategori_id";
+        String sql = "SELECT * FROM tb_barang";
 
         try {
             con = akses.connect();
@@ -166,11 +164,10 @@ public class Method_Barang {
                 tempBarang.setBarang_harga(Integer.parseInt(rs.getString("Barang_harga")));
                 tempBarang.setBarang_satuan(rs.getString("Barang_satuan"));
                 tempBarang.setBarang_deskripsi(rs.getString("Barang_deskripsi"));
-                tempBarang.setKategori_id(rs.getString("Kategori_id"));
-                tempBarang.setKategori_nama(rs.getString("kategori_nama"));
                 tempBarang.setBarang_gambar(rs.getString("Barang_foto"));
-                tempBarang.setBarang_status(Boolean.parseBoolean(rs.getString("Barang_status")));
                 tempBarang.setBarang_keadaan(rs.getString("Barang_kondisi"));
+                tempBarang.setKategori_nama(rs.getString("barang_kategori"));
+                tempBarang.setBarang_status(Boolean.parseBoolean(rs.getString("Barang_status")));
 
                 listSupplier.add(tempBarang);
             }
@@ -190,6 +187,54 @@ public class Method_Barang {
             } catch (SQLException b) {
                 b.printStackTrace();
                 return daftarbarang;
+            }
+        }
+    }
+
+    public J_Barang getDataBarangByKode(String kodebarang) {
+        J_Barang daftarbarang = null;
+        String pwd = "";
+        String login = "root";
+        Connection con = null;
+        ResultSet rs = null;
+
+        AksesJdbcOdbc akses = new AksesJdbcOdbc("jdbc:mysql://localhost:3306/db_andra", login, pwd);
+        String sql = "SELECT * FROM `tb_barang` where barang_id='"+kodebarang+"'";
+
+        try {
+            con = akses.connect();
+
+            rs = akses.executeQuery(sql);
+
+            String kode_supplier = null;
+            if (rs.next()) {
+
+                daftarbarang = new J_Barang();
+                daftarbarang.setBarang_id(rs.getString("Barang_id"));
+                daftarbarang.setBarang_nama(rs.getString("Barang_nama"));
+                daftarbarang.setBarang_harga(Integer.parseInt(rs.getString("Barang_harga")));
+                daftarbarang.setBarang_satuan(rs.getString("Barang_satuan"));
+                daftarbarang.setBarang_deskripsi(rs.getString("Barang_deskripsi"));
+                daftarbarang.setBarang_gambar(rs.getString("Barang_foto"));
+                daftarbarang.setBarang_keadaan(rs.getString("Barang_kondisi"));
+                daftarbarang.setKategori_nama(rs.getString("barang_kategori"));
+                daftarbarang.setBarang_status(Boolean.parseBoolean(rs.getString("Barang_status")));
+
+            }
+
+        } catch (ClassNotFoundException x) {
+            x.printStackTrace();
+
+        } catch (SQLException n) {
+            n.printStackTrace();
+
+        } finally {
+            try {
+                akses.disconnect();
+                return daftarbarang;
+            } catch (SQLException y) {
+                y.printStackTrace();
+                return null;
             }
         }
     }

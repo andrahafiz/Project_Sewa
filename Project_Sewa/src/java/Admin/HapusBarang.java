@@ -27,8 +27,8 @@ public class HapusBarang extends HttpServlet {
 
             RequestDispatcher control = null;
 //
-//            control = getServletContext().getRequestDispatcher("/Admin/index.jsp");
-//            control.forward(request, response);
+            control = getServletContext().getRequestDispatcher("/Admin/index.jsp");
+            control.forward(request, response);
         } finally {
             out.close();
         }

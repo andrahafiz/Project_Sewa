@@ -52,9 +52,10 @@ public class DeleteBarang extends HttpServlet {
             request.setAttribute("kode", kode);
 
             RequestDispatcher control = null;
+            response.sendRedirect("Admin/index.jsp?hlm=Barang");
 //
-            control = getServletContext().getRequestDispatcher("/Admin/after.jsp");
-            control.forward(request, response);
+//            control = getServletContext().getRequestDispatcher("/Admin/index.jsp");
+//            control.forward(request, response);
         } finally {
             out.close();
         }

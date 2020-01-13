@@ -4,7 +4,7 @@
     Author     : User
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%String pesan = (String) request.getAttribute("pesan");%>
+<%String pesan = (String) request.getAttribute("mes");%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,3 +22,4 @@
         </script>
     </body>
 </html>
+z

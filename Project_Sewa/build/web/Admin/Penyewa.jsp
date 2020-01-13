@@ -9,7 +9,7 @@
 <%Methods penyewafcd = new Methods();
     J_Penyewa[] dataPenyewa = penyewafcd.getDataPenyewa();
 //    String a = request.getParameter("status");
- 
+
 
 %>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 
 
             <div class="row">
-               
+
                 <div class="col-md-12">
                     <!-- DATA TABLE -->
                     <h3 class="title-5 m-b-35">data penyewa</h3>
@@ -46,8 +46,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <%
-                                    for (int i = 0; i < dataPenyewa.length; i++) {%>
+                                <%                                    for (int i = 0; i < dataPenyewa.length; i++) {%>
 
                                 <tr class="spacer"></tr>
                                 <!--<tr class="tr-shadow">-->
@@ -90,12 +89,7 @@
                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
                                         <i class="zmdi zmdi-format-list-bulleted"></i>
                                     </button>
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="zmdi zmdi-edit"></i>
-                                    </button>
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
+                                    
                                 </div>
                             </td>
 
@@ -108,18 +102,10 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyright">
-                        <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </div>
-</div>
 
-</div>
 
 

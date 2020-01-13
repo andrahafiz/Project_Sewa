@@ -22,11 +22,11 @@
                        
                         <li class="active has-sub">
                             <a class="js-arrow" href="index.jsp">
-                                <i class="fas fa-tachometer-alt"></i></a>
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                            
                         </li>
                         <li>
-                            <a href="index.jsp?hlm=penyewa">
+                            <a href="view/ViewBarang.jsp">
                                 <i class="fas fa-chart-bar"></i>Data Penyewa</a>
                         </li>
                         <li>
@@ -34,7 +34,7 @@
                                 <i class="fas fa-chart-bar"></i>Data Barang</a>
                         </li>
                         <li >
-                            <a href="index.jsp?hlm=InputBarang">
+                            <a href="view/TambahBarang.jsp">
                                 <i class="far fa-check-square"></i>Input Data Barang</a>
                         </li>
                         <li>

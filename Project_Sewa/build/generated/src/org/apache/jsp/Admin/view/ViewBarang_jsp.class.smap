@@ -1,0 +1,48 @@
+SMAP
+ViewBarang_jsp.java
+JSP
+*S JSP
+*F
++ 0 ViewBarang.jsp
+Admin/view/ViewBarang.jsp
++ 1 Menu_SideBar.jsp
+Admin/view/../controller/Menu_SideBar.jsp
++ 2 header.jsp
+Admin/view/../header/header.jsp
++ 3 Barang.jsp
+Admin/view/../controller/Barang.jsp
++ 4 footer.jsp
+Admin/view/../footer/footer.jsp
+*L
+1,7:54
+7,45:61
+5#1:106
+9:110,2
+10,105:112
+51#0,8:217
+1#2,62:225
+58#0,3:287
+5#3,5:290
+9,3:294
+11,2:297
+13:299,2
+14,35:301
+49:337,2
+50:339
+51,3:340,3
+54:349
+55,2:350,3
+57:356
+72:372,2
+73,2:374,3
+75,5:380
+80:385,3
+81,3:388
+84:391,3
+85,11:394
+96:405,3
+97,15:408
+60#0,4:422
+5#4,11:426
+63#0,36:437
+*E

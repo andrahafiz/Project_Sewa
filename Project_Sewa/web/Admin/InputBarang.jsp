@@ -22,7 +22,7 @@
     Method_Barang kategorifcd = new Method_Barang();
     J_Barang brg = null;
     brg = (new Method_Barang()).KodeBarang();
-    Kategori[] daftarkategori = kategorifcd.getDaftarKategori();
+//    Kategori[] daftarkategori = kategorifcd.getDaftarKategori();
 %>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -56,6 +56,12 @@
             }
         }
     }
+    function hanyaAngka(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
 </script>
 <!-- MAIN CONTENT-->
 <div class="main-content">
@@ -82,7 +88,7 @@
                                     <label for="text-input" class=" form-control-label">Nama Barang</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="text-input" name="nama-input" class="form-control">
+                                    <input type="text" id="text-input" name="nama-input" class="form-control" required="">
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -90,12 +96,18 @@
                                     <label for="harga-input" class=" form-control-label">Harga Barang / Satuan</label>
                                 </div>
                                 <div class="col-12 col-md-5">
-                                    <input type="text" id="harga-input" name="harga-input" placeholder="Rp." class="form-control">
+                                    <input type="text" id="harga-input" name="harga-input" placeholder="Rp." class="form-control" required=""  onkeypress="return hanyaAngka(event)">
 
                                 </div>
                                 <div class="col-12 col-md">
-                                    <input type="text" id="satuan-input" name="satuan-input" placeholder="" class="form-control">
-                                    <small class="help-block form-text">Jam / Hari / Minggu / Bulan / Tahun</small>
+                                    <select name="satuan-input" id="select" class="form-control" required="">
+                                        <option value="0">Silahkan Pilih</option>
+                                        <option value="Hari">Hari</option>
+                                        <option value="Minggu">Minggu</option>
+                                        <option value="Bulan">Bulan</option>
+                                        <option value="Tahun">Tahun </option>
+
+                                    </select>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -103,26 +115,17 @@
                                     <label for="select" class=" form-control-label">Kategori Barang</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <select name="kategori" id="select" class="form-control">
+                                    <select name="kategori" id="select" class="form-control" required="">
                                         <option value="0">Silahkan Pilih</option>
-                                        <%
-                                            for (int i = 0; i < daftarkategori.length; i++) {%>
+                                        <option value="Tenda">Tenda</option>
+                                        <option value="Tas">Tas</option>
+                                        <option value="Alat Masak">Alat Masak</option>
+                                        <option value="Alat Komunikasi">Alat Komunikasi</option>
+                                        <option value="Perlengkapan Tidur">Perlengkapan Tidur</option>
+                                        <option value="Lain">Lain-lain</option>
 
-                                        <option value=<% out.print(daftarkategori[i].getKategori_id()); %>><% out.print(daftarkategori[i].getKategori_nama()); %></option>
-                                        <%}%>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3">
-                                    <label for="maintenance-input" class=" form-control-label">Tanggal Maintenance</label>
-                                </div>
-                                <div class="col-12 col-md-9">
-                                    <input type="text" id="maintenance-input" name="maintenance-input" placeholder='<%= getCurrentDate()%>' value='<%= getCurrentDate()%>' class="form-control">
-                                    <small class="help-block form-text">Format : yyyy-MM-dd</small>
-
-                                </div>
-
                             </div>
 
                             <div class="row form-group">
@@ -130,7 +133,7 @@
                                     <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <textarea name="deskripsi-input" id="textarea-input" rows="9" placeholder="Berikan deskripsi pada barang..." class="form-control"></textarea>
+                                    <textarea name="deskripsi-input" id="textarea-input" rows="9" placeholder="Berikan deskripsi pada barang..." class="form-control" ></textarea>
                                 </div>
                             </div>
 
@@ -140,7 +143,7 @@
                                     <label for="status-input" class=" form-control-label">Status Barang</label>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <select name="status" id="status-input" disabled class="form-control">
+                                    <select name="status" id="status-input" disabled class="form-control" required="">
                                         <option value="0">Silahkan Pilih</option>
                                         <option value="True" selected>Ada</option>
                                         <option value="False">Kosong</option>
@@ -199,7 +202,7 @@
                         </button>
                     </div>
                 </div>
-            </form>
+                </form>
 
             </div>
         </div>

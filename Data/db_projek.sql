@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2019 at 08:04 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Jan 11, 2020 at 05:51 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -67,7 +67,7 @@ CREATE TABLE `tb_barang` (
   `barang_nama` varchar(200) NOT NULL,
   `barang_harga` int(11) NOT NULL,
   `barang_satuan` varchar(20) NOT NULL,
-  `barang_deskripsi` text,
+  `barang_deskripsi` text DEFAULT NULL,
   `barang_foto` varchar(150) NOT NULL DEFAULT 'non-image.png',
   `barang_kondisi` varchar(20) NOT NULL,
   `barang_maintenance` date NOT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE `tb_transaksi` (
   `transaksi_id` varchar(20) NOT NULL,
   `barang_id` varchar(20) NOT NULL,
   `penyewa_noidentitas` varchar(20) NOT NULL,
-  `transaksi_tgltransaksi` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `transaksi_tgltransaksi` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `transaksi_tglsewa` date NOT NULL,
   `transaksi_tglkembali` date NOT NULL,
   `transaksi_total` int(11) NOT NULL

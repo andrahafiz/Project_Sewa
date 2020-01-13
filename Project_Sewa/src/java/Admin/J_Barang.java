@@ -12,7 +12,7 @@ package Admin;
  */
 public class J_Barang {
 
-    private String barang_id, barang_nama, kategori_nama,barang_satuan, kategori_id, barang_deskripsi, barang_foto,barang_keadaan,barang_maintenance;
+    private String barang_id, barang_nama, kategori_nama,barang_satuan,ketogori, barang_deskripsi, barang_foto,barang_keadaan,barang_maintenance;
     private boolean barang_status;
     private int barang_harga;
 
@@ -55,15 +55,7 @@ public class J_Barang {
     public void setBarang_maintenance(String barang_maintenance) {
         this.barang_maintenance = barang_maintenance;
     }
- 
 
-    public String getKategori_id() {
-        return kategori_id;
-    }
-
-    public void setKategori_id(String kategori_id) {
-        this.kategori_id = kategori_id;
-    }
 
     public String getBarang_deskripsi() {
         return barang_deskripsi;
