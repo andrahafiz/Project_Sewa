@@ -34,12 +34,21 @@
 
             <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
                 <span class="badge badge-pill badge-success">Success</span>
-               Anda berhasil menambahkan data barang.
+                Anda berhasil menambahkan data barang.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <%}}%>
+            <%} else if (pesan.equalsIgnoreCase("succesdelete")) {%>
+            <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+                <span class="badge badge-pill badge-success">Success</span>
+                Anda berhasil menghapus data barang.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <%}
+                }%>
 
 
             <div class="overview-wrap">
@@ -99,9 +108,11 @@
                                     <td><center><img class="" src='../../Img/<%= dataBarang[i].getBarang_gambar()%>' alt="Card image cap" style="width: 100px; height: 75px;"></center></td>
                             <td colspan="">
                                 <div class="table-data-feature">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
-                                        <i class="zmdi zmdi-format-list-bulleted"></i>
-                                    </button>
+                                    <a href='../view/ViewDetailBarang.jsp?kode=<%= dataBarang[i].getBarang_id()%>'>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
+                                            <i class="zmdi zmdi-format-list-bulleted"></i>
+                                        </button>
+                                    </a>
                                     <a href='../view/ViewEditBarang.jsp?kode=<%= dataBarang[i].getBarang_id()%>'>
                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                             <i class="zmdi zmdi-edit"></i>

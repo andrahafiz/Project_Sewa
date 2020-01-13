@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class DeleteBarang extends HttpServlet {
+public class UpdateBarangAction extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,30 +30,59 @@ public class DeleteBarang extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
             String pesan = null;
             String mes = null;
             String kode = request.getParameter("kode");
-            /* TODO output your page here. You may use following sample code. */
-            Method_Barang supplierbean = new Method_Barang();
+            String kode_barang = request.getParameter("kode-input");
+            String nama_barang = request.getParameter("nama-input");
+            int harga_barang = Integer.parseInt(request.getParameter("harga-input"));
+            String satuan_barang = request.getParameter("satuan-input");
+            String deskripsi_barang = request.getParameter("deskripsi-input");
+            String foto_barang = "non-image.png";
+            String kondisi_barang = request.getParameter("kondisi");
+            String kategori_barang = request.getParameter("kategori");
+            String status_barang = request.getParameter("status");
+            if (status_barang == null) {
+                status_barang = "True";
+            }
 
-            if (supplierbean.delete(kode) == true) {
+            J_Barang sup = new J_Barang();
+            sup.setBarang_id(kode_barang);
+            sup.setBarang_nama(nama_barang);
+            sup.setBarang_harga(harga_barang);
+            sup.setBarang_satuan(satuan_barang);
+            sup.setBarang_deskripsi(deskripsi_barang);
+            sup.setBarang_foto(foto_barang);
+            sup.setBarang_keadaan(kondisi_barang);
+            sup.setKategori_nama(kategori_barang);
+            sup.setBarang_status(Boolean.parseBoolean(status_barang));
+
+            String update = "UPDATE `tb_barang` SET "
+                    + "`barang_nama` = '" + nama_barang + "', "
+                    + "`barang_harga` = '" + harga_barang + "', "
+                    + "`barang_satuan` = '" + satuan_barang + "', "
+                    + "`barang_deskripsi` = '" + deskripsi_barang + "', "
+                    + "`barang_foto` = 'non-image.png', "
+                    + "`barang_kondisi` = '" + kondisi_barang + "',"
+                    + "`barang_kategori` ='" + kategori_barang + "', "
+                    + "`barang_status` = '" + status_barang + "' "
+                    + "WHERE `tb_barang`.`barang_id` = '" + kode_barang + "'";
+            out.print(update);
+//
+            Method_Barang supplierbean = new Method_Barang();
+            if (supplierbean.edit(sup) == true) {
                 pesan = "succesdelete";
-                
             } else {
                 pesan = "faileddelete";
             }
             request.setAttribute("pesan", pesan);
             request.setAttribute("mes", mes);
             request.setAttribute("kode", kode);
-
-            RequestDispatcher control = null;
-            response.sendRedirect("Admin/view/ViewBarang.jsp?pesan="+pesan);
 //
-//            control = getServletContext().getRequestDispatcher("/Admin/index.jsp");
-//            control.forward(request, response);
+            RequestDispatcher control = null;
+            response.sendRedirect("Admin/view/ViewBarang.jsp?pesan=" + pesan);
         } finally {
             out.close();
         }

@@ -74,7 +74,7 @@
                         <strong>Form Data</strong> Barang
                     </div>
                     <div class="card-body card-block">
-                        <form action="../controller/OlahAddBarang.jsp" method="POST" >
+                        <form action="../../UpdateBarangAction" method="POST" >
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label class=" form-control-label">Kode Barang</label>
@@ -106,35 +106,25 @@
                                             String status = brg.getBarang_satuan();
                                             if (status.equalsIgnoreCase("hari")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari' selected >Hari</option>"
                                                         + "<option value='Minggu' >Minggu</option>"
                                                         + "<option value='Bulan'>Bulan</option>"
                                                         + "<option value='Tahun'>Tahun </option>");
-                                            } else if (status.equalsIgnoreCase("jam")) {
-                                                out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam' selected >Jam</option>"
-                                                        + "<option value='Hari'  >Hari</option>"
-                                                        + "<option value='Minggu' >Minggu</option>"
-                                                        + "<option value='Bulan'>Bulan</option>"
-                                                        + "<option value='Tahun'>Tahun </option>");
+
                                             } else if (status.equalsIgnoreCase("minggu")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari'  >Hari</option>"
                                                         + "<option value='Minggu' selected>Minggu</option>"
                                                         + "<option value='Bulan'>Bulan</option>"
                                                         + "<option value='Tahun'>Tahun </option>");
                                             } else if (status.equalsIgnoreCase("bulan")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari'  >Hari</option>"
                                                         + "<option value='Minggu' >Minggu</option>"
                                                         + "<option value='Bulan' selected>Bulan</option>"
                                                         + "<option value='Tahun'>Tahun </option>");
                                             } else if (status.equalsIgnoreCase("tahun")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari'  >Hari</option>"
                                                         + "<option value='Minggu' >Minggu</option>"
                                                         + "<option value='Bulan' >Bulan</option>"
@@ -176,6 +166,14 @@
                                                         + "<option value = 'Tas' > Tas</option> "
                                                         + "<option value =  'Alat Masak' > Alat Masak</option>"
                                                         + "<option value =  'Alat Komunikasi' selected> Alat Komunikasi</option>"
+                                                        + "<option value =  'Perlengkapan Tidur' > Perlengkapan Tidur</option >"
+                                                        + "<option value =  'Lain' > Lain-lain</option >");
+                                            } else if (kategori.equalsIgnoreCase("Tas")) {
+                                                out.print("  <option  value = '0' > Silahkan Pilih</option> "
+                                                        + "<option value = 'Tenda' > Tenda </option>"
+                                                        + "<option value = 'Tas' selected> Tas</option> "
+                                                        + "<option value =  'Alat Masak' > Alat Masak</option>"
+                                                        + "<option value =  'Alat Komunikasi' > Alat Komunikasi</option>"
                                                         + "<option value =  'Perlengkapan Tidur' > Perlengkapan Tidur</option >"
                                                         + "<option value =  'Lain' > Lain-lain</option >");
                                             }

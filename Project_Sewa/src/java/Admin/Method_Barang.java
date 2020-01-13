@@ -52,7 +52,7 @@ public class Method_Barang {
         boolean sukses = false;
         try {
             String update = "UPDATE `tb_barang` SET "
-                    + "`barang_nama` = '" + dataBarang.getKategori_nama() + "', "
+                    + "`barang_nama` = '" + dataBarang.getBarang_nama()+ "', "
                     + "`barang_harga` = '" + dataBarang.getBarang_harga() + "', "
                     + "`barang_satuan` = '" + dataBarang.getBarang_satuan() + "', "
                     + "`barang_deskripsi` = '" + dataBarang.getBarang_deskripsi() + "', "

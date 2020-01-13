@@ -12,6 +12,10 @@
         <servlet-name>DeleteBarang</servlet-name>
         <servlet-class>Admin.DeleteBarang</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateBarangAction</servlet-name>
+        <servlet-class>Admin.UpdateBarangAction</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DataBrg</servlet-name>
         <url-pattern>/DataBrg</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>DeleteBarang</servlet-name>
         <url-pattern>/DeleteBarang</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateBarangAction</servlet-name>
+        <url-pattern>/UpdateBarangAction</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

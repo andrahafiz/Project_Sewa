@@ -90,7 +90,6 @@ public final class FormEditBarang_jsp extends org.apache.jasper.runtime.HttpJspB
 
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
-      out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<script>\r\n");
       out.write("    function tampilkanPreview(gambar, idpreview) {\r\n");
@@ -180,35 +179,25 @@ public final class FormEditBarang_jsp extends org.apache.jasper.runtime.HttpJspB
                                             String status = brg.getBarang_satuan();
                                             if (status.equalsIgnoreCase("hari")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari' selected >Hari</option>"
                                                         + "<option value='Minggu' >Minggu</option>"
                                                         + "<option value='Bulan'>Bulan</option>"
                                                         + "<option value='Tahun'>Tahun </option>");
-                                            } else if (status.equalsIgnoreCase("jam")) {
-                                                out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam' selected >Jam</option>"
-                                                        + "<option value='Hari'  >Hari</option>"
-                                                        + "<option value='Minggu' >Minggu</option>"
-                                                        + "<option value='Bulan'>Bulan</option>"
-                                                        + "<option value='Tahun'>Tahun </option>");
+                                           
                                             } else if (status.equalsIgnoreCase("minggu")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari'  >Hari</option>"
                                                         + "<option value='Minggu' selected>Minggu</option>"
                                                         + "<option value='Bulan'>Bulan</option>"
                                                         + "<option value='Tahun'>Tahun </option>");
                                             } else if (status.equalsIgnoreCase("bulan")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari'  >Hari</option>"
                                                         + "<option value='Minggu' >Minggu</option>"
                                                         + "<option value='Bulan' selected>Bulan</option>"
                                                         + "<option value='Tahun'>Tahun </option>");
                                             } else if (status.equalsIgnoreCase("tahun")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
-                                                        + "<option value='Jam'  >Jam</option>"
                                                         + "<option value='Hari'  >Hari</option>"
                                                         + "<option value='Minggu' >Minggu</option>"
                                                         + "<option value='Bulan' >Bulan</option>"

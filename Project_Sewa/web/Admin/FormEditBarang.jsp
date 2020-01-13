@@ -74,7 +74,7 @@
                         <strong>Form Data</strong> Barang
                     </div>
                     <div class="card-body card-block">
-                        <form action="OlahAddBarang.jsp" method="POST" >
+                        <form action="../../src/java/Admin/UpdateBarangAction.java" method="POST" >
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label class=" form-control-label">Kode Barang</label>
@@ -110,7 +110,7 @@
                                                         + "<option value='Minggu' >Minggu</option>"
                                                         + "<option value='Bulan'>Bulan</option>"
                                                         + "<option value='Tahun'>Tahun </option>");
-                                           
+
                                             } else if (status.equalsIgnoreCase("minggu")) {
                                                 out.print("  <option value='0'>Silahkan Pilih</option>"
                                                         + "<option value='Hari'  >Hari</option>"
