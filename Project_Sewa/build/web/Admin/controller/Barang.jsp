@@ -47,10 +47,32 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
+            <%} else if (pesan.equalsIgnoreCase("faileddelete")) {%>
+            <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                <span class="badge badge-pill badge-danger">Success</span>
+                Anda gagal menghapus data barang.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <%} else if (pesan.equalsIgnoreCase("failededit")) {%>
+            <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                <span class="badge badge-pill badge-danger">Success</span>
+                Anda gagal mengubah data barang.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <%} else if (pesan.equalsIgnoreCase("succesedit")) {%>
+            <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+                <span class="badge badge-pill badge-success">Success</span>
+                Anda gagal mengubah data barang.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
             <%}
                 }%>
-
-
             <div class="overview-wrap">
                 <h2 class="title-1">Data Barang</h2>
                 <a href="../view/TambahBarang.jsp">
@@ -58,7 +80,6 @@
                         <i class="zmdi zmdi-plus"></i>Tambah Baru</button>
                 </a>
             </div>
-
 
             <div class="row m-t-20">
                 <div class="col-md-12">
@@ -88,24 +109,10 @@
 
                                     <td><% out.print(dataBarang[i].getKategori_nama()); %></td>
                                     <td>RP. <% out.print(dataBarang[i].getBarang_harga() + " / " + dataBarang[i].getBarang_satuan()); %></td>
-                                    <%
-                                        //                                        boolean status = dataBarang[i].isBarang_status();
-                                        //                                        String keterangan = "";
-                                        //                                        String warna = "";
-                                        //                                        if (status == true) {
-                                        //                                            keterangan = "Ada";
-                                        //                                            warna = "process";
-                                        //                                        } else {
-                                        //                                            keterangan = "Di Pinjam";
-                                        //                                            warna = "denied";
-                                        //                                        }
-                                        //
-                                        //                                        out.print("<td class='" + warna + "'>");
-                                        //                                        out.print(keterangan);
-                                        //                                        out.print("</td>");
-                                        //                                    %>
-                                    <td><span class="role user"><% out.print(dataBarang[i].getBarang_keadaan()); %></span></td>
-                                    <td><center><img class="" src='../../Img/<%= dataBarang[i].getBarang_gambar()%>' alt="Card image cap" style="width: 100px; height: 75px;"></center></td>
+                                    <td><span class="role user"><% out.print(dataBarang[i].getBarang_keadaan());%></span></td>
+                                    <td><center>
+                                <img class="" src='../../Img/<%= dataBarang[i].getBarang_gambar()%>' alt="Card image cap" style="width: 100px; height: 75px;">
+                            </center></td>
                             <td colspan="">
                                 <div class="table-data-feature">
                                     <a href='../view/ViewDetailBarang.jsp?kode=<%= dataBarang[i].getBarang_id()%>'>
@@ -118,26 +125,20 @@
                                             <i class="zmdi zmdi-edit"></i>
                                         </button>
                                         <a href='../../DeleteBarang?kode=<%= dataBarang[i].getBarang_id()%>'>
-
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-
                                                 <i class="zmdi zmdi-delete"></i>
-
                                             </button>
                                         </a>
                                 </div>
                             </td>
-
                             </tr>
                             <% }%>
-
                             </tbody>
                         </table>
                     </div>
                     <!-- END DATA TABLE-->
                 </div>
             </div>
-
         </div>
     </div>
 </div>

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<%
-    String kategori = request.getParameter("hlm");
-%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <html lang="en">
@@ -15,7 +13,7 @@
         <meta name="keywords" content="au theme template">
 
         <!-- Title Page-->
-        <title>Data Barang</title>
+        <title>Dashboard</title>
 
         <!-- Fontfaces CSS-->
         <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -37,23 +35,31 @@
 
         <!-- Main CSS-->
         <link href="css/theme.css" rel="stylesheet" media="all">
+
     </head>
 
     <body class="animsition">
         <div class="page-wrapper">
+
+
             <!-- MENU SIDEBAR-->
             <%@include file="../controller/Menu_SideBar.jsp" %>
+           
+            <!-- END MENU SIDEBAR-->
+
             <!-- PAGE CONTAINER-->
             <div class="page-container">
                 <!-- HEADER DESKTOP-->
                 <%@include file="../header/header.jsp" %>
+                <!-- HEADER DESKTOP-->
+                <%@include file="../controller/Transaksi.jsp" %>
                 <!-- MAIN CONTENT-->
-                <%@include file="../controller/Barang.jsp" %>
-                <!-- END MAIN CONTENT-->
-                <!-- FOOTER -->
+               
                 <%@include file="../footer/footer.jsp" %>
-                <!-- END FOOTER -->
+                <!-- END MAIN CONTENT-->
+                <!-- END PAGE CONTAINER-->
             </div>
+
         </div>
 
         <!-- Jquery JS-->

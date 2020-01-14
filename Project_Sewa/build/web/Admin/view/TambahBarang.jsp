@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-
 <%
     String kategori = request.getParameter("hlm");
-
-
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -16,10 +13,8 @@
         <meta name="description" content="au theme template">
         <meta name="author" content="Hau Nguyen">
         <meta name="keywords" content="au theme template">
-
         <!-- Title Page-->
         <title>Dashboard</title>
-
         <!-- Fontfaces CSS-->
         <link href="css/font-face.css" rel="stylesheet" media="all">
         <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -37,21 +32,14 @@
         <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
         <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
         <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
         <!-- Main CSS-->
         <link href="css/theme.css" rel="stylesheet" media="all">
-
     </head>
-
     <body class="animsition">
         <div class="page-wrapper">
-
-
             <!-- MENU SIDEBAR-->
             <%@include file="../controller/Menu_SideBar.jsp" %>
-           
             <!-- END MENU SIDEBAR-->
-
             <!-- PAGE CONTAINER-->
             <div class="page-container">
                 <!-- HEADER DESKTOP-->
@@ -59,12 +47,10 @@
                 <!-- HEADER DESKTOP-->
                 <%@include file="../controller/InputBarang.jsp" %>
                 <!-- MAIN CONTENT-->
-               
                 <%@include file="../footer/footer.jsp" %>
                 <!-- END MAIN CONTENT-->
                 <!-- END PAGE CONTAINER-->
             </div>
-
         </div>
 
         <!-- Jquery JS-->

@@ -73,9 +73,9 @@ public class UpdateBarangAction extends HttpServlet {
 //
             Method_Barang supplierbean = new Method_Barang();
             if (supplierbean.edit(sup) == true) {
-                pesan = "succesdelete";
+                pesan = "succesedit";
             } else {
-                pesan = "faileddelete";
+                pesan = "failededit";
             }
             request.setAttribute("pesan", pesan);
             request.setAttribute("mes", mes);

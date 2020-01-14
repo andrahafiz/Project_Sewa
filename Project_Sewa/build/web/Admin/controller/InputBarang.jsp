@@ -96,7 +96,8 @@
                                     <label for="harga-input" class=" form-control-label">Harga Barang / Satuan</label>
                                 </div>
                                 <div class="col-12 col-md-5">
-                                    <input type="text" id="harga-input" name="harga-input" placeholder="Rp." class="form-control" required=""  onkeypress="return hanyaAngka(event)">
+                                    <input type="text" id="harga-input" name="harga-input" placeholder="Rp." class="form-control" required=""  
+                                           onkeypress="return hanyaAngka(event)">
 
                                 </div>
                                 <div class="col-12 col-md">
@@ -134,10 +135,10 @@
                                     <label for="textarea-input" class=" form-control-label">Deskripsi</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <textarea name="deskripsi-input" id="textarea-input" rows="9" placeholder="Berikan deskripsi pada barang..." class="form-control" ></textarea>
+                                    <textarea name="deskripsi-input" id="textarea-input" rows="9" 
+                                              placeholder="Berikan deskripsi pada barang..." class="form-control" ></textarea>
                                 </div>
                             </div>
-
 
                             <div class="row form-group">
                                 <div class="col col-md-3">
@@ -181,7 +182,8 @@
 
                                     <div class="row">
                                         <div class="col-sm-12 m-b-10">
-                                            <input type="file" id="file" name="file" class="form-control-file" type="file"  id="file" onchange="tampilkanPreview(this, 'preview')">
+                                            <input type="file" id="file" name="file" class="form-control-file" type="file"  id="file" 
+                                                   onchange="tampilkanPreview(this, 'preview')">
                                         </div>
                                     </div>
 
