@@ -56,12 +56,7 @@
             }
         }
     }
-    function hanyaAngka(evt) {
-        var charCode = (evt.which) ? evt.which : event.keyCode
-        if (charCode > 31 && (charCode < 48 || charCode > 57))
-            return false;
-        return true;
-    }
+  
 </script>
 <!-- MAIN CONTENT-->
 <div class="main-content">
@@ -88,7 +83,7 @@
                                     <label for="text-input" class=" form-control-label">Nama Barang</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="text-input" name="nama-input" class="form-control" required="">
+                                    <input type="text" id="text-input" name="nama-input" class="form-control" >
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -96,12 +91,12 @@
                                     <label for="harga-input" class=" form-control-label">Harga Barang / Satuan</label>
                                 </div>
                                 <div class="col-12 col-md-5">
-                                    <input type="text" id="harga-input" name="harga-input" placeholder="Rp." class="form-control" required=""  
+                                    <input type="text" id="harga-input" name="harga-input" placeholder="Rp." class="form-control"
                                            onkeypress="return hanyaAngka(event)">
 
                                 </div>
                                 <div class="col-12 col-md">
-                                    <select name="satuan-input" id="select" class="form-control" required="">
+                                    <select name="satuan-input" id="select" class="form-control" >
                                         <option value="0">Silahkan Pilih</option>
                                         <option value="Jam">Jam</option>
                                         <option value="Hari">Hari</option>
@@ -117,7 +112,7 @@
                                     <label for="select" class=" form-control-label">Kategori Barang</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <select name="kategori" id="select" class="form-control" required="">
+                                    <select name="kategori" id="select" class="form-control" >
                                         <option value="0">Silahkan Pilih</option>
                                         <option value="Tenda">Tenda</option>
                                         <option value="Tas">Tas</option>
@@ -145,7 +140,7 @@
                                     <label for="status-input" class=" form-control-label">Status Barang</label>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <select name="status" id="status-input" disabled class="form-control" required="">
+                                    <select name="status" id="status-input" disabled class="form-control" >
                                         <option value="0">Silahkan Pilih</option>
                                         <option value="True" selected>Ada</option>
                                         <option value="False">Kosong</option>

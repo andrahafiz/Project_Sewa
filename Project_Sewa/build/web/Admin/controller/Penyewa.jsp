@@ -85,10 +85,10 @@
                             </td>
 
                             <td colspan="2">
-                                <div class="table-data-feature">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
-                                        <i class="zmdi zmdi-format-list-bulleted"></i>
-                                    </button>
+                                 <div class="table-data-feature">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
+                                            <i class="zmdi zmdi-format-list-bulleted"></i>
+                                        </button>
                                     
                                 </div>
                             </td>

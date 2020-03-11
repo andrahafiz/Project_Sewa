@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <img id="preview" class="img-thumbnail" style="border: 2px solid #ddd" width="320px" src="../../Img/non-image.png"/>
+                                    <img id="preview" class="img-thumbnail" style="border: 2px solid #ddd" width="320px" src="../../Img/<%=brg.getBarang_gambar()%>"/>
                                 </div>
                             </div>
                             <div class="row">
